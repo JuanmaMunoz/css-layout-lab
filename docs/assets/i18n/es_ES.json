@@ -1,0 +1,382 @@
+{
+  "container": "Contenedor",
+  "child": "Hijo",
+  "example": "Ejemplo",
+  "examples": "Ejemplos",
+  "result": "Resultado",
+  "home": {
+    "getStarted": "Fundamentos básicos del layout en CSS",
+    "introduction": "En el desarrollo web, estructurar y dar forma a la interfaz no siempre es tan sencillo como parece. En <span class='brick'><b>CSS Layout Lab</b></span> no pretendemos inventar nada nuevo, sino profundizar en las <b>herramientas que CSS ya nos brinda</b> para crear diseños <b>claros, accesibles y flexibles</b>.",
+    "description": "Este artículo reúne de manera práctica las principales técnicas de maquetación en CSS: desde los tradicionales <span class='brick'><b>block</b></span> e <span class='brick'><b>inline</b></span>, hasta sistemas modernos como <span class='brick'><b>flexbox</b></span> y <span class='brick'><b>grid</b></span>, que ofrecen un nivel de control mucho más avanzado.",
+    "example": {
+      "title": "Aprende de forma visual con ejemplos prácticos",
+      "description": "Para <span class='blue'><b>facilitar</b></span> la comprensión del contenido y ofrecer una <span class='blue'><b>ayuda visual</b></span> al usuario en el aprendizaje de las distintas técnicas para construir <span class='blue'><b>layouts</b></span>, he decidido utilizar la metáfora de los <span class='brick'><b>ladrillos</b></span> en cada <span class='blue'><b>ejemplo</b></span>. Para evitar verbosidad en el código, en los ejemplos, solo mostramos la información relevante, pero aquí os muestro, cómo se puede crear un <span class='brick'><b>ladrillo</b></span> con <span class='blue'><b>CSS</b></span>. ¡Espero que disfruten del contenido!"
+    },
+    "aboutMe": {
+      "title": "Sobre mí",
+      "description": "<p>Después de muchos años trabajando en el desarrollo web, <b>CSS es uno de esos lenguajes que nunca deja de sorprenderme</b> por sus posibilidades y constantes novedades. Y seamos sinceros: nunca he logrado dominarlo por completo ni llegar a conocer todas sus capacidades.</p><p>Por eso me he animado a crear esta documentación, donde intento explicar de forma sencilla la <b>creación de layouts con CSS</b>, que es uno de los usos más frecuentes de este lenguaje en la programación web.</p><p>Este tutorial está pensado para todo tipo de desarrolladores, desde <b>juniors</b> hasta <b>expertos</b>. Algunos podrán descubrir aquí conceptos básicos por primera vez, mientras que otros podrán observar de forma nativa el comportamiento de ciertas propiedades que quizás suelen delegar en librerías como <b>Bootstrap</b>, sin llegar a trabajar directamente con <b>Grid</b> o <b>Flexbox</b>.</p><p>¡Espero que lo disfruten!</p>"
+    }
+  },
+  "basicConcepts": {
+    "title": "Fundamentos básicos del layout en CSS",
+    "title2": "Fundamentos básicos",
+    "description": "<p>Nuestro objetivo es mostrar, a través de ejemplos simples y comparativos, cómo <b>alinear</b> elementos tanto en sentido <b>horizontal</b> como <b>vertical</b>, cómo <b>organizar</b> las distintas secciones de una página y en qué situaciones conviene aplicar cada técnica.</p><p>Queremos ayudarte a <b>visualizar</b>, <b>practicar</b> y <b>comprender</b> lo esencial para <b>mejorar</b> tus <b>diseños</b> y escribir <b>CSS</b> con mayor <b>seguridad</b> y <b>claridad</b>.</p><p>Antes de adentrarnos en <span class='brick'><b>block</b></span>, <span class='brick'><b>inline-block</b></span>, <span class='brick'><b>flex</b></span> o <span class='brick'><b>grid</b></span>, es fundamental entender algunos <b>conceptos clave</b> que determinan cómo se <b>posicionan</b> y <b>comportan</b> los elementos dentro de una <b>página web</b>.</p>",
+    "boxModel": {
+      "title": "<i class='moss bi bi-1-circle'></i> Modelo de caja (Box Model)",
+      "description": "Todo elemento en <b>HTML</b> es una <b>caja</b>. Este modelo define cómo se calcula el espacio que ocupa un elemento:",
+      "item1": "<b>margin</b>:&nbsp; El espacio externo, entre esta caja y otras.",
+      "item2": "<b>border</b>:&nbsp; El borde que rodea el contenido y el padding de un elemento, y se puede personalizar en grosor, estilo y color.",
+      "item3": "<b>padding</b>:&nbsp; Espacio interno, entre el contenido y el borde.",
+      "item4": "<b>content</b>:&nbsp; El contenido del elemento (texto, imagen, etc.)."
+    },
+    "display": {
+      "title": "<i class='moss bi bi-2-circle'></i> Display, el tipo de caja",
+      "description": "La propiedad <b>display</b> determina cómo se <b>comporta la caja</b>. Puede ser:",
+      "item1": "<b>block</b>: Ocupa todo el ancho disponible y comienza en una nueva línea.",
+      "item2": "<b>inline</b>: No inicia una nueva línea y solo ocupa el espacio necesario.",
+      "item3": "<b>inline-block</b>: Como inline, pero permite definir ancho, alto, etc.",
+      "item4": "<b>flex y grid</b>: Sistemas modernos de layout (los veremos en detalle más adelante)."
+    },
+    "axis": {
+      "title": "<i class='moss bi bi-3-circle'></i> Filas y columnas",
+      "description": "Cuando hablamos de <b>flex</b> o <b>grid</b>, debemos pensar en <b>filas</b> y <b>columnas</b>.",
+      "item1": "En <b>flex</b>, los elementos se organizan en una sola fila o columna, según <b>flex-direction</b>.",
+      "item2": "En <b>grid</b>, se pueden organizar en <b>filas</b> y <b>columnas</b> simultáneamente.",
+      "item3": "Entender esta estructura ayuda a controlar cómo se <b>alinean</b> y <b>distribuyen</b> los elementos <b>hijos</b>."
+    },
+    "containers": {
+      "title": "<i class='moss bi bi-4-circle'></i> Contenedores y elementos hijos",
+      "description": "Un layout siempre tiene una jerarquía:",
+      "item1": "El <b>contenedor</b> es el elemento padre que define el <b>contexto</b> (display: flex, grid, etc).",
+      "item2": "Los elementos <b>hijos</b> se comportan según las reglas de ese contexto."
+    },
+    "gap": {
+      "title": "<i class='moss bi bi-5-circle'></i> Gap, separación entre hijos",
+      "description": "Las propiedades <b>gap</b>, <b>row-gap</b> y <b>column-gap</b> permiten controlar la <b>separación entre los elementos</b> de un contenedor <b>flex</b> o <b>grid</b>:",
+      "item1": "<b>gap</b>:&nbsp; Define un espacio uniforme entre filas y columnas.",
+      "item2": "<b>row-gap</b>:&nbsp; Define solo la separación entre las filas.",
+      "item3": "<b>column-gap</b>:&nbsp; Define solo la separación entre las columnas.",
+      "item4": "Estas propiedades sustituyen al uso de <code>margin</code> en los hijos, haciendo el layout más limpio y predecible."
+    },
+    "responsive": {
+      "title": "<i class='moss bi bi-6-circle'></i> Responsividad",
+      "description": "En la actualidad, los sitios web deben ser <b>adaptables</b>, capaces de ajustarse a <b>diferentes tamaños de pantalla</b>, desde móviles hasta monitores grandes. Las propiedades modernas como <b>flex</b> y <b>grid</b> permiten crear layouts que se <b>reorganizan automáticamente</b>. Esto facilita el desarrollo de diseños <b>fluidos</b>, <b>consistentes</b> y más <b>mantenibles</b>."
+    },
+    "units": {
+      "title": "<i class='moss bi bi-7-circle'></i> Unidades en CSS",
+      "description": "En <b>CSS</b> existen varias <b>unidades básicas</b> que se usan para definir medidas como tamaños, márgenes, paddings, fuentes, etc. Se dividen en <b>absolutas</b> y <b>relativas</b>.",
+      "absolutes": {
+        "title": "<span class='gray'>Unidades Absolutas</span>",
+        "description": "<b>Estas <b>no cambian</b> según el contexto; siempre miden lo mismo.",
+        "item1": "<b>px (píxeles)</b>:&nbsp; Unidad fija, ideal para detalles precisos.",
+        "item2": "<b>cm, mm, in (centímetros, milímetros, pulgadas)</b>:&nbsp; Más comunes en impresión.",
+        "item3": "<b>pt (puntos)</b>:&nbsp; Usado en tipografía, 1pt = 1/72 de pulgada.",
+        "item4": "<b>pc (picas)</b>:&nbsp; 1pc = 12pt, también en tipografía.",
+        "item5": "<b>q (cuartos de milímetro)</b>:&nbsp; 1q = 0.25mm, usado en impresión."
+      },
+      "relatives": {
+        "title": "<span class='gray'>Unidades Relativas</span>",
+        "description": "Estas <b>cambian</b> según el contexto, como el tamaño de la pantalla o la fuente.",
+        "item1": "<b>% (porcentaje)</b>:&nbsp; Relativo al elemento padre. Muy útil para layouts fluidos.",
+        "item2": "<b>em</b>:&nbsp; Relativo al tamaño de fuente del elemento padre. 2em = 2 veces el tamaño de fuente del padre.",
+        "item3": "<b>rem</b>:&nbsp; Relativo al tamaño de fuente raíz (normalmente el del html). Más predecible que em.",
+        "item4": "<b>vw (viewport width)</b>:&nbsp; 1vw = 1% del ancho de la ventana gráfica. Útil para diseños responsivos.",
+        "item5": "<b>vh (viewport height)</b>:&nbsp; 1vh = 1% de la altura de la ventana gráfica.",
+        "item6": "<b>vmin</b>:&nbsp; El menor valor entre vw y vh.",
+        "item7": "<b>vmax</b>:&nbsp; El mayor valor entre vw y vh.",
+        "item8": "<b>svw / svh</b>:&nbsp; small viewport (útil en móviles con barras dinámicas).",
+        "item9": "<b>lvw / lvh</b>:&nbsp; Representa el tamaño máximo posible de la ventana gráfica, como si las barras de navegación (la superior o inferior del navegador) estuvieran ocultas.",
+        "item10": "<b>dvw / dvh</b>:&nbsp; Representa el tamaño actual del viewport, que cambia cuando aparecen o desaparecen las barras del navegador."
+      }
+    }
+  },
+  "blockInline": {
+    "title": "Block & Inline",
+    "description": "<p><span class='brick'><b>Block</b></span>, <span class='brick'><b>Inline</b></span> e <span class='brick'><b>Inline-block</b></span> son <b>modelos de visualización</b> que definen cómo los <b>elementos HTML</b> se <b>organizan</b> y <b>ocupan espacio</b> en la página, controlando su <b>flujo</b>, <b>alineación</b> y <b>dimensiones</b>.</p>",
+    "block": {
+      "title": "<i class='moss bi bi-box'></i> Block",
+      "description": "Los elementos <b>block</b> se comportan como <b>bloques completos</b>:",
+      "item1": "Empiezan en una <b>nueva línea</b>.",
+      "item2": "Ocupan, por defecto, <b>todo el ancho disponible</b>.",
+      "item3": "Permiten definir <b>width</b>, <b>height</b>, <b>margin</b>, <b>padding</b> sin problema.",
+      "item4": "Son <b>ideales</b> cuando necesitas que los elementos se <b>apilen verticalmente</b> y quieres controlar <b>tamaño</b> y <b>espaciado</b>.",
+      "defaultElements": "Elementos HTML que son <span class='brick'>block</span> por <span class='brick'>defecto</span>:",
+      "example": "<p>En este ejemplo tenemos un contenedor que contiene tres hijos con la clase <b>child</b> configurados como display <span class='brick'><b>block</b></span>, donde cada hijo ocupa todo el ancho <b>posible</b> del <b>contenedor</b> al <b>no</b> tener un <b>ancho</b> establecido</b>.</p><p><i class='moss bi bi-info-square'></i> La clase <b>child</b>, no sería necesario, configurarla como display <span class='brick'><b>block</b></span> ya que por defecto, los <b>div</b> son <span class='brick'><b>block</b></span> (se hace con fines didácticos).</p>"
+    },
+    "inline": {
+      "title": "<i class='moss bi bi-box'></i> Inline",
+      "description": "Los elementos <b>inline </b> fluyen <b>en la misma línea que el texto</b>:",
+      "item1": "<b>No</b> inician en una <b>nueva línea</b> y solo ocupan el <b>ancho necesario</b>.",
+      "item2": "Se pueden <b>anidar</b> dentro de elementos <b>block</b> o <b>inline</b>.",
+      "item3": "<b>No</b> permiten propiedades de caja como <b>width, height, margin-top, margin-bottom</b>. Generalmente, <b>no</b> puedes establecer <b>width</b> o <b>height</b>, <b>ni márgenes verticales</b>. <b>Sí</b> puedes aplicar <b>padding</b> y <b>margin horizontal</b>.",
+      "item4": "<b>Pueden</b> contener <b>solo</b> texto u <b>otros</b> elementos <b>inline</b>.",
+      "item5": "Son <b>ideales</b> cuando quieres que el contenido <b>fluya</b> dentro de un <b>párrafo</b>.",
+      "defaultElements": "Elementos HTML que son <span class='brick'>inline</span> por <span class='brick'>defecto</span>:",
+      "example": "<p>En este ejemplo tenemos un contenedor que contiene tres hijos con la clase <b>child</b> configurados como display <span class='brick'><b>inline</b></span>, donde cada hijo solo ocupa el ancho <b>necesario</b> del <b>contenedor</b>. Podemos comprobar como el <b>padding</b> del contenedor, <b>no se ajusta</b> a la altura de sus hijos, si estos elementos son <span class='brick'><b>inline</b></span>.</p><p><i class='moss bi bi-info-square'></i> La clase <b>child</b>, no sería necesario, configurarla como display <span class='brick'><b>inline</b></span> ya que por defecto, los <b>span</b> son <span class='brick'><b>inline</b></span> (se hace con fines didácticos).</p>"
+    },
+    "inlineBlock": {
+      "title": "<i class='moss bi bi-box'></i> Inline-Block",
+      "description": "Los elementos <b>inline-block</b> combinan características de los elementos <b>inline</b> y <b>block</b>:",
+      "item1": "Fluyen <b>en línea</b> como los elementos <b>inline</b>, pero permiten <b>dimensiones de caja</b> como los elementos <b>block</b>.",
+      "item2": "Se <b>alinean horizontalmente</b> con otros elementos inline o inline-block.",
+      "item3": "<b>Sí</b> aceptan propiedades como <b>width</b>, <b>height</b>, <b>padding</b> y <b>margin</b> (tanto verticales como horizontales).",
+      "item4": "<b>No</b> inician en una nueva línea, pero <b>respetan su propio tamaño</b> dentro del flujo inline.",
+      "item5": "Son <b>ideales</b> para <b>componentes pequeños</b> como botones, tarjetas o cajas que deben <b>alinearse horizontalmente</b> pero al mismo tiempo, tener un <b>comportamiento de bloque</b>.",
+      "defaultElements": "Elementos HTML que son <span class='brick'>inline-block</span> por <span class='brick'>defecto</span>:",
+      "example": "<p>En este ejemplo tenemos un contenedor que contiene tres hijos con la clase <b>child</b> configurados como display <span class='brick'><b>inline-block</b></span>, donde cada hijo ocupa el ancho y alto establecido en su <b>configuración</b>. Podemos comprobar como el contenedor, <b>se ajusta</b> a la altura de sus hijos a diferencia de los elementos configurados como <span class='brick'><b>inline</b></span>.</p>"
+    }
+  },
+  "flex": {
+    "title": "Flex",
+    "description": "<p><span class='brick'><b>Flex</b></span> (<b>Flexbox</b>) es un modelo de diseño <b>unidimensional</b> que distribuye los elementos en <b>fila</b> o <b>columna</b>, con control de separación y alineación adaptable (eje principal) y (eje cruzado), logrando diseños <b>flexibles</b> y <b>responsivos</b>. <span class='brick'><b>Flex</b></span> es <b>ideal</b> cuando necesitas <b>alinear</b> elementos en un solo eje (horizontal o vertical) de forma <b>flexible</b>, <b>adaptando</b> su tamaño y posición según el <b>espacio disponible</b>.</p>",
+    "direction": {
+      "title": "<i class='moss bi bi-compass'></i> flex-direction",
+      "description": "Controla cómo se <b>disponen</b> los elementos <b>hijos</b> en el eje <b>principal</b>:",
+      "item1": "<b>row</b> (predeterminado):&nbsp; Dispone los elementos de izquierda a derecha.",
+      "item2": "<b>row-reverse</b>:&nbsp; Dispone los elementos de derecha a izquierda.",
+      "item3": "<b>column</b>:&nbsp; Dispone los elementos de arriba hacia abajo.",
+      "item4": "<b>column-reverse</b>:&nbsp; Dispone los elementos de abajo hacia a arriba.",
+      "example": "<p>Con este ejemplo dinámico, le damos al usuario, la oportunidad, de ver las distintas <b>disposiciones</b> de los elementos <b>hijos</b>, al modificar la propiedad <b>flex-direction</b> en el <b>selector</b>.</p>",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>flex-direction</b>:"
+    },
+    "wrap": {
+      "title": "<i class='moss bi bi-text-wrap'></i> flex-wrap</span>",
+      "description": "Determina si los ítems deben mantenerse en una sola línea o envolverse.",
+      "item1": "<b>nowrap</b> (predeterminado):&nbsp; Todo en una línea, aunque se desborde.",
+      "item2": "<b>wrap</b>:&nbsp; Los ítems pasan a una nueva línea si no caben.",
+      "item3": "<b>wrap-reverse</b>:&nbsp; igual que <b>wrap</b>, pero envuelven en sentido inverso.",
+      "example": "<p>Con este ejemplo dinámico, le damos al usuario, la oportunidad, de ver las distintas <b>disposiciones</b> de los elementos <b>hijos</b>, al modificar la propiedad <b>flex-wrap</b> en el <b>selector</b>.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>flex-wrap</b>:"
+    },
+    "justifyAlignRow": {
+      "example": "<p>Con este ejemplo dinámico, le damos al usuario, la oportunidad, de ver las distintas <b>disposiciones</b> de los elementos <b>hijos</b>, al modificar las propiedades <b>justify-content</b> y <b>align-items</b> en los <b>selectores</b>.</p>",
+      "justify": {
+        "title": "<i class='moss bi bi-arrows'></i> justify-content <span class='moss small'>(row)</span>",
+        "description": "<b>justify-content</b> en un contenedor con <b>flex-direction: row</b>, <b>alinea</b> los elementos hijos <b>horizontalmente</b> dentro del contenedor <b>flex</b>.",
+        "item1": "<b>flex-start</b> (predeterminado):&nbsp; Alinea los elementos al inicio (izquierda).",
+        "item2": "<b>center</b>:&nbsp; Centra los elementos horizontalmente.",
+        "item3": "<b>flex-end</b>:&nbsp; Alinea los elementos al final (derecha).",
+        "item4": "<b>space-between</b>:&nbsp; Deja el mayor espacio posible entre los elementos.",
+        "item5": "<b>space-around</b>:&nbsp; Deja el mismo espacio entre los elementos.",
+        "item6": "<b>space-evenly</b>:&nbsp; Deja el mismo espacio entre los elementos y su alrededor.",
+        "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>justify-content</b>:"
+      },
+      "align": {
+        "title": "<i class='moss bi bi-arrows-vertical'></i> align-items <span class='moss small'>(row)</span>",
+        "description": "<b>align-items</b> en un contenedor con <b>flex-direction: row</b>, <b>alinea</b> los elementos hijos <b>verticalmente</b>. <b>aling-content</b> hace lo mismo que aling-items pero cuando hay varias filas (flex-wrap:wrap) y estas se han envuelto.",
+        "item1": "<b>stretch</b> (predeterminado):&nbsp; Estira los elementos para que llenen el alto del contenedor.",
+        "item2": "<b>flex-start</b>:&nbsp; Alinea todos los elementos en la parte superior.",
+        "item3": "<b>center</b>:&nbsp; Centra los elementos verticalmente.",
+        "item4": "<b>flex-end</b>:&nbsp; Alinea todos los elementos en la parte inferior.",
+        "item5": "<b>baseline</b>:&nbsp; Alinea los elementos según la línea base del texto.",
+        "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>align-items</b>:"
+      }
+    },
+    "justifyAlignColumn": {
+      "example": "<p>Con este ejemplo dinámico, le damos al usuario, la oportunidad, de ver las distintas <b>disposiciones</b> de los elementos <b>hijos</b>, al modificar las propiedades <b>justify-content</b> y <b>align-items</b> en los <b>selectores</b>.</p>",
+      "justify": {
+        "title": "<i class='moss bi bi-arrows-vertical'></i> justify-content <span class='moss small'>(column)</span>",
+        "description": "<b>justify-content</b> en un contenedor con <b>flex-direction: column</b>, <b>alinea</b> los elementos hijos <b>verticalmente</b> dentro del contenedor <b>flex</b>.",
+        "item1": "<b>flex-start</b> (predeterminado):&nbsp; Alinea todos los elementos arriba del contenedor.",
+        "item2": "<b>center</b>:&nbsp; Centra los elementos verticalmente.",
+        "item3": "<b>flex-end</b>:&nbsp; Alinea todos los elementos abajo del contenedor.",
+        "item4": "<b>space-between</b>:&nbsp; Primer elementos arriba, último abajo, los demás repartidos.",
+        "item5": "<b>space-around</b>:&nbsp; Mismo espacio entre los elementos.",
+        "item6": "<b>space-evenly</b>:&nbsp; Mismo espacio entre los elementos y su alrededor.",
+        "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>justify-content</b>:"
+      },
+      "align": {
+        "title": "<i class='moss bi bi-arrows'></i> align-items <span class='moss small'>(column)</span>",
+        "description": "<b>align-items</b> en un contenedor con <b>flex-direction: column</b>, <b>alinea</b> los elementos hijos <b>horizontalmente</b>.",
+        "item1": "<b>stretch</b> (predeterminado):&nbsp; Los elementos se <b>estiran horizontalmente</b> al ancho del contenedor (si no tienen width fijo).",
+        "item2": "<b>flex-start</b>:&nbsp; Alinea todos los elementos a la izquierda.",
+        "item3": "<b>center</b>:&nbsp; Centra los elementos horizontalmente.",
+        "item4": "<b>flex-end</b>:&nbsp; Alinea todos los elementos a la derecha.",
+        "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>align-items</b>:"
+      }
+    },
+    "grow": {
+      "title": "<i class='moss bi bi-0-square'></i> flex-grow</span>",
+      "description": "Define cómo un <b>ítem</b> flex <b>crece</b> para llenar el espacio extra disponible en el <b>contenedor</b>.",
+      "item1": "Valor por defecto:&nbsp; 0 (<b>no</b> crece).",
+      "item2": "Si pones un número <b>mayor</b> que 0, el ítem <b>crecerá proporcionalmente</b> según ese <b>valor</b>.",
+      "example": "<p>En este ejemplo, podemos comprobar como el <b>item</b> con la clase <b>child-1</b> tiene el tamaño <b>por defecto</b> al tener <b>flex-grow</b> a <b>0</b>. Por el contrario, el resto de <b>items</b>, <b>crecen</b> en <b>proporción</b> al valor de <b>flex-grow</b> en su respectiva clase, ocupando el item <b>child-3</b> el <b>doble</b> del ancho que el item <b>child-2</b>.</p>"
+    },
+    "shrink": {
+      "title": "<i class='moss bi bi-1-square'></i> flex-shrink</span>",
+      "description": "Define cómo un <b>ítem</b> flex se <b>encoge</b> cuando el espacio del <b>contenedor</b> es menor que la <b>suma</b> de los <b>ítems</b>.",
+      "item1": "Valor por defecto:&nbsp; 1 (<b>sí</b> se encoge).",
+      "item2": "Si pones <b>0</b>, ese ítem <b>no</b> se <b>encogerá</b> aunque falte espacio.",
+      "example": "<p>En este ejemplo, podemos comprobar como el <b>item</b> con la clase <b>child-1, no</b> se <b>encoge</b>, al tener <b>flex-shrink</b> a <b>0</b>. Por el contrario, el resto de <b>items</b>, se <b>encogen</b> al tener <b>flex-shrink</b> a <b>1</b>.</p>"
+    },
+    "basis": {
+      "title": "<i class='moss bi bi-rulers'></i> flex-basis</span>",
+      "description": "Es el tamaño <b>base</b> del ítem <b>antes</b> de que se apliquen <b>crecimientos</b> o <b>encogimientos</b>.",
+      "item1": "Por defecto es <b>auto</b>, que toma el tamaño natural del contenido o el definido con ancho / alto.",
+      "item2": "Puede ser un valor en px, %, auto, rem, em, etc.",
+      "example": "<p>En este ejemplo, podemos comprobar como cada <b>item</b> coge el <b>ancho</b> en función del valor que se le atribuye mediante la propiedad <b>flex-basis</b>.</p>"
+    },
+    "order": {
+      "title": "<i class='moss bi bi-sort-alpha-down'></i> order</span>",
+      "description": "Controla el <b>orden</b> de los <b>ítems</b> flex. Por defecto, todos tienen <b>order: 0</b>. Los ítems con un valor <b>menor</b> aparecerán <b>antes</b>.",
+      "item1": "Un ítem con <b>order:&nbsp; -1</b> aparecerá antes que uno con <b>order: 0</b>.",
+      "item2": "Un ítem con <b>order:&nbsp; 1</b> aparecerá después de los que tienen <b>order: 0</b>.",
+      "example": "<p>En este ejemplo, podemos comprobar como los <b>items</b> se ordenan de <b>menor a mayor</b> en función del valor <b>order</b>.</p>"
+    }
+  },
+  "grid": {
+    "title": "Grid",
+    "description": "<p><b>Css</b> <span class='brick'><b>Grid</b></span> es un sistema de diseño <b>bidimensional</b> que permite organizar elementos en <b>filas</b> y <b>columnas</b> de forma precisa, con control de separación para filas y columnas. A <b>diferencia</b> de <span class='brick'><b>Flexbox</b></span>, que se centra en la distribución en <b>una</b> sola <b>dirección</b> (fila o columna), <span class='brick'><b>Grid</b></span> facilita el control completo del layout en <b>dos ejes</b>. Su gran <b>ventaja</b> es que puedes definir <b>estructuras complejas</b> de forma <b>sencilla</b> y <b>adaptable</b>, con control sobre <b>cantidad</b> y <b>tamaño</b> de filas y columnas, <b>espaciado</b> y <b>alineación</b> de los elementos, <b>reorganización</b> del <b>diseño</b> en función de pantallas o dispositivos (<b>responsive</b>).</p>",
+
+    "basics": {
+      "title": "<i class='moss bi bi-box'></i> Grid Container & Items",
+      "description": "El <b>contenedor</b> se define con <b>display: grid</b> o <b>display: inline-grid</b>, y sus <b>hijos</b> directos se convierten en <b>grid items</b> que se distribuyen en la cuadrícula.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>display</b>:",
+      "item1": "<b>grid</b>:&nbsp; El contenedor se comporta como un bloque que ocupa <b>todo</b> el ancho disponible.",
+      "item2": "<b>inline-grid</b>:&nbsp; El contenedor se comporta como un elemento en línea, ocupando solo el espacio <b>necesario</b>.",
+      "example": "<p>En este ejemplo dinámico, podremos comprobar como se ajustan los elementos hijos, en función del valor de <b>display</b>.</p>"
+    },
+    "explicit": {
+      "title": "<i class='moss bi bi-grid-1x2'></i> Explicit Grid",
+      "description": "Es un sistema de diseño en el que la cuadrícula <b>se define explícitamente</b> mediante <b>grid-template-rows</b> y <b>grid-template-columns</b>.",
+      "item1": "Las <b>filas</b> y <b>columnas</b> son <b>declaradas</b> directamente en la cuadrícula.",
+      "item2": "No se crean filas o columnas adicionales a menos que los <b>items</b> las fuercen (en cuyo caso entra en juego la cuadrícula implícita).",
+      "item3": "Ideal para <b>diseños predecibles</b>, donde conocemos de antemano el número exacto de filas y columnas.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>ejemplo</b>:",
+      "example": "<p>En este ejemplo dinámico, al <b>no</b> tratar <b>implícitamente</b> los tamaños de las <b>filas</b> y <b>columnas</b> que se crean <b>adicionalmente</b>, estas <b>cogen</b> el <b>alto</b> y <b>ancho</b> del hijo. </p>"
+    },
+    "implicit": {
+      "title": "<i class='moss bi bi-bounding-box'></i> Implicit Grid",
+      "description": "Es un sistema de diseño en el que la cuadrícula <b>se expande automáticamente</b> para alojar elementos que no caben en la cuadrícula explícita definida.",
+      "item1": "Las <b>filas</b> o <b>columnas</b> que no están declaradas en la cuadrícula explícita <b>se generan de forma automática</b>.",
+      "item2": "Podemos usar <b>grid-auto-rows</b> o <b>grid-auto-columns</b> para definir el tamaño de las filas/columnas implícitas que se vayan creando.",
+      "item3": "Ideal cuando el número de <b>elementos</b> es <b>dinámico</b> o desconocido de antemano.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>grid-auto</b>:",
+      "example": "<p>En este ejemplo dinámico, podemos ver como sería la creación de una <b>fila implícita</b>, la cual coge el alto de <b>grid-auto-rows</b> y la creación de una <b>columna implícita</b> donde su ancho corresponde con la propiedad <b>grid-auto-columns</b>.</p>"
+    },
+    "autoFlow": {
+      "title": "<i class='moss bi bi-shuffle'></i> Grid Auto-Flow",
+      "description": "Es la propiedad que controla cómo se colocan automáticamente los <b>items</b> en la cuadrícula cuando no se especifican sus posicionamientos.",
+      "item1": "<b>row</b>:&nbsp; (Valor por defecto), los elementos se colocan en <b>filas</b>.",
+      "item2": "<b>column</b>:&nbsp; Los elementos se posicionan en <b>columnas</b>.",
+      "item3": "<b>dense</b>:&nbsp; intentará <b>rellenar huecos</b> reordenando elementos posteriores.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>grid-auto-flow</b>:",
+      "example": "<p>En este ejemplo dinámico, podremos ver como se ordenan los elementos según el valor de <b>grid-auto-row</b>.</p>"
+    },
+    "positioning": {
+      "title": "<i class='moss bi bi-arrows-move'></i> Posicionamiento de Items",
+      "description": "Los <b>grid items</b> pueden ocupar celdas específicas o abarcar varias filas/columnas mediante propiedades dedicadas.",
+      "item1": "<b>grid-column</b> y <b>grid-row</b>:&nbsp; permiten definir en qué fila/columna comienza y termina un item.",
+      "item2": "<b>grid-area</b>:&nbsp; combina en una sola propiedad la fila y columna de inicio/fin.",
+      "select": "<i class='moss bi bi-hand-index'></i> Selecciona <b>positioning</b>:",
+      "example": "<p>En este ejemplo dinámico, podemos comprobar como con <b>grid-column / grid-row</b> le decimos al elemento con la clase <b>positioning</b> que ocupe las <b>columnas</b> 1 y 2, y las <b>filas</b> 1 y 2. Con <b>grid-area</b> le decimos al elemento con la clase <b>positioning</b> que coja la <b>fila</b> 1 y 2, y la <b>columna</b> 3</p>"
+    },
+    "areas": {
+      "title": "<i class='moss bi bi-layout-text-window-reverse'></i> Grid Template Areas",
+      "description": "Permite definir layouts mediante <b>nombres semánticos</b> para distintas zonas de la cuadrícula.",
+      "item1": "En el contenedor se usa <b>grid-template-areas</b>.",
+      "item2": "Cada item se asigna con <b>grid-area: nombre</b>.",
+      "example": "En este ejemplo, con <b>grid-template-areas</b> definimos un layout con 3 filas y 3 columnas, donde cada <b>celda</b>, tiene un <b>nombre</b> semántico. Luego, cada item se posiciona en la cuadrícula asignándole el <b>nombre correspondiente</b> mediante <b>grid-area</b>."
+    },
+    "functions": {
+      "title": "<i class='moss bi bi-cpu'></i> Funciones útiles",
+      "description": "Funciones que facilitan la creación de cuadrículas dinámicas y responsivas.",
+      "item1": "<b>repeat</b> (n,value):&nbsp; evita escribir manualmente <b>n</b> veces el mismo <b>valor</b>.",
+      "item2": "<b>minmax</b> (min,max):&nbsp; <b>define</b> valores <b>mínimo</b> y <b>máximo</b>.",
+      "item3": "<b>auto-fit</b>:&nbsp; intenta <b>ajustar</b> las columnas al <b>ancho</b> del contenedor; si sobra espacio, colapsa huecos.",
+      "item4": "<b>auto-fill</b>:&nbsp; similar a <b>auto-fit</b>, pero deja huecos <b>vacíos</b> si no hay suficientes ítems.",
+      "example": "En este ejemplo, con <b>grid-template-columns: repeat (auto-fit, minmax (70px, 1fr))</b> creamos tantas columnas como quepan (auto-fit), cada columna tendrá al menos 70px, si sobra espacio, se reparte proporcionalmente (1fr). Con <b>grid-auto-rows: minmax (50px, auto)</b>, cada fila mide mínimo 50px de alto."
+    },
+    "alignment-container": {
+      "title": "<i class='moss bi bi-columns-gap'></i> Alineación de contenedor",
+      "description": "Propiedades que controlan cómo se alinean los items dentro de cada celda del grid.",
+      "item1": "<b>justify-items</b>:&nbsp; alinea <b>horizontalmente</b> los items dentro de cada celda.",
+      "item2": "<b>align-items</b>:&nbsp; alinea <b>verticalmente</b> los items dentro de cada celda.",
+      "item3": "<b>place-items</b>:&nbsp; atajo para combinar <b>justify-items</b> y <b>align-items</b>.",
+      "item4": "<h5 class='mt-1 mb-1'>Posibles valores:</h5>",
+      "item5": "<b>stretch</b>:&nbsp; <b>Estira</b> el item para llenar toda la celda (predeterminado).",
+      "item6": "<b>start</b>:&nbsp; Alinea al <b>inicio</b> de la celda (izquierda para horizontal, arriba para vertical).",
+      "item7": "<b>center</b>:&nbsp; <b>Centra</b> el item dentro de la celda.",
+      "item8": "<b>end</b>:&nbsp; Alinea al <b>final</b> de la celda (derecha para horizontal, abajo para vertical).",
+      "selectJustify": "<i class='moss bi bi-hand-index'></i> Selecciona <b>justify-items</b>:",
+      "selectAlign": "<i class='moss bi bi-hand-index'></i> Selecciona <b>align-items</b>:",
+      "example": "<p>En este ejemplo dinámico, podemos comprobar las diferentes alineaciones de las celdas con las distintas propiedades de <b>justify-items</b> y <b>align-items</b>.</p>"
+    },
+    "alignment-content": {
+      "title": "<i class='moss bi bi-grid'></i> Alineación del contenido",
+      "description": "Propiedades que controlan cómo se distribuyen las filas y columnas del grid dentro del contenedor.",
+      "item1": "<b>justify-content</b>:&nbsp; distribuye <b>horizontalmente</b> las columnas dentro del grid.",
+      "item2": "<b>align-content</b>:&nbsp; distribuye <b>verticalmente</b> las filas dentro del grid.",
+      "item3": "<b>place-content</b>:&nbsp; atajo para combinar <b>justify-content</b> y <b>align-content</b>.",
+      "item4": "<h5 class='mt-1 mb-1'>Posibles valores:</h5>",
+      "item5": "<b>stretch</b>:&nbsp; <b>Estira</b> filas/columnas para ocupar todo el espacio disponible. (predeterminado).",
+      "item6": "<b>start</b>:&nbsp; Alinea todo el grid al <b>inicio</b> del eje (arriba o izquierda).",
+      "item7": "<b>center</b>:&nbsp; <b>Centra</b> el grid en el eje.",
+      "item8": "<b>end</b>:&nbsp; Sitúa todas las filas/columnas al <b>final</b> del eje (abajo o derecha).",
+      "item9": "<b>space-around</b>:&nbsp; Reparte el espacio dejando <b>márgenes iguales alrededor de cada grupo de filas o columnas</b> (los bordes tienen la mitad de espacio que el interior).",
+      "item10": "<b>space-between</b>:&nbsp; Distribuye filas o columnas de modo que la <b>primera y la última</b> queden pegadas a los bordes, y el espacio se reparta solo entre las del medio.",
+      "item11": "<b>space-evenly</b>:&nbsp; Coloca <b>espacios totalmente iguales</b> entre todas las filas o columnas y también en los bordes.",
+      "selectJustify": "<i class='moss bi bi-hand-index'></i> Selecciona <b>justify-content</b>:",
+      "selectAlign": "<i class='moss bi bi-hand-index'></i> Selecciona <b>align-content</b>:",
+      "example": "<p>En este ejemplo dinámico, podemos comprobar las diferentes alineaciones de filas y columnas con las distintas propiedades de <b>justify-content</b> y <b>align-content</b>.</p>"
+    },
+    "alignment-item": {
+      "title": "<i class='moss bi bi-box'></i> Alineación de item",
+      "description": "Propiedades para alinear <b>individualmente</b> un item dentro de su propia celda.",
+      "item1": "<b>justify-self</b>:&nbsp; alinea <b>horizontalmente</b> un item en su celda.",
+      "item2": "<b>align-self</b>:&nbsp; alinea <b>verticalmente</b> un item en su celda.",
+      "item3": "<b>place-self</b>:&nbsp; atajo para combinar <b>justify-self</b> y <b>align-self</b>.",
+      "item4": "<h5 class='mt-1 mb-1'>Posibles valores:</h5>",
+      "item5": "<b>stretch</b>:&nbsp; El ítem se <b>estira</b> para ocupar toda la celda en ese eje (predeterminado).",
+      "item6": "<b>start</b>:&nbsp; Alinea al <b>inicio</b> del eje (izquierda en horizontal, arriba en vertical).",
+      "item7": "<b>center</b>:&nbsp; <b>Centra</b> en el eje correspondiente.",
+      "item8": "<b>end</b>:&nbsp; Alinea al <b>final</b> del eje (derecha en horizontal, abajo en vertical).",
+      "selectJustify": "<i class='moss bi bi-hand-index'></i> Selecciona <b>justify-self</b>:",
+      "selectAlign": "<i class='moss bi bi-hand-index'></i> Selecciona <b>align-self</b>:",
+      "example": "<p>En este ejemplo dinámico, podemos comprobar las diferentes alineaciones de un item dentro de su propia celda mediante <b>justify-self</b> y <b>align-self</b>.</p>"
+    },
+    "fixed": {
+      "title": "<i class='moss bi bi-grid'></i> Fixed Grid",
+      "description": "Es un sistema de diseño en el que la página o interfaz se organiza usando una cuadrícula con columnas y anchos <b>predefinidos</b>, que no se adaptan al tamaño de la pantalla.",
+      "item1": "<b>Filas</b> y <b>columnas</b> con tamaños <b>fijos</n> (em, px, rem ...).",
+      "item2": "Ideal para <b>diseños</b> muy <b>controlados</b> donde el contenido y el tamaño son <b>predecibles</b>.",
+      "example": "<p>En este ejemplo contamos con <b>2 filas</b> y un máximo de <b>3 columnas</b>. Al colocar un <b>cuarto elemento</b>, este pasa automáticamente a la siguiente fila. Con la propiedad <b>grid-template-rows</b> definimos el <b>número</b> de filas y su <b>altura</b>, mientras que con <b>grid-template-columns</b> definimos el <b>número</b> de columnas y su <b>ancho</b>.</p><p>Además, mediante <b>row-gap</b> controlamos la separación entre filas y con <b>column-gap</b> la separación entre columnas.</p>"
+    },
+    "fluid": {
+      "title": "<i class='moss bi bi-grid-3x3-gap'></i> Fluid Grid",
+      "description": "Es un sistema de diseño en el que la página o interfaz se organiza usando una cuadrícula con columnas y anchos <b>flexibles</b>, que <b>se adaptan</b> dinámicamente al tamaño de la pantalla.",
+      "item1": "<b>Filas</b> y <b>columnas</b> con tamaños <b>relativos</b> (%, fr, auto ...).",
+      "item2": "Ideal para <b>diseños</b> que requieren <b>adaptabilidad</b> en distintos <b>dispositivos</b> y resoluciones.",
+      "example": "<p>En este ejemplo, usamos <b>grid-template-columns</b> para definir el <b>número</b> de columnas y su respectivos <b>anchos</b>, pero esta vez se tratan de <b>anchos proporcionales</b> en función del <b>ancho</b> del <b>contenedor</b>. De esta forma, la primera columna ocupa el <b>50%</b> del contenedor y las otras dos se <b>reparten el ancho restante</b>, en función de su <b>fr</b>.</p><p>Con <b>gap</b>, establecemos la <b>sepación</b> de filas y columnas al <b>mismo tiempo</b>.</p>"
+    },
+    "subgrid": {
+      "title": "<i class='moss bi bi-diagram-3'></i> Subgrid",
+      "description": "Es una característica de <b>CSS Grid nivel 2</b> que permite a un grid hijo heredar la definición de filas o columnas del grid padre.",
+      "item1": "Se usa en <b>grid-template-rows</b> o <b>grid-template-columns</b> con el valor <b>subgrid</b>.",
+      "item2": "El subgrid debe ocupar un rango de columnas o filas del padre",
+      "example": "<p>En este ejemplo, podemos ver como la clase content, hereda la definición de las columnas del contenedor padre, para ello usamos <b>grid-column: 1 / -1</b>, con el cual, vamos a ocupar todas las columnas disponibles, desde la primera hasta la última.</p>"
+    },
+    "units": {
+      "title": "<i class='moss bi bi-123'></i> Unidades en Grid",
+      "description": "A parte de las unidades básicas de CSS (px, em, rem, vh, vw...), estas son las unidades más usadas en CSS <b>Grid</b>:",
+      "item1": "<b>fr</b>:&nbsp; fracción del espacio disponible.",
+      "item2": "<b>%</b>:&nbsp; relativo al contenedor.",
+      "item3": "<b>auto</b>:&nbsp; tamaño según contenido.",
+      "item4": "<b>min-content</b> / <b>max-content</b>:&nbsp; ajusta al contenido mínimo o máximo.",
+      "item5": "<b>span</b>:&nbsp; permite a un elemento ocupar varias <b>filas</b> o <b>columnas</b> según el número indicado.",
+      "example": "<p>En este ejemplo, mostramos una serie de columnas con cada una de estas unidades, donde podemos visualizar el comportamiento de cada una de ellas.</p>"
+    },
+    "responsive": {
+      "title": "<i class='moss bi bi-phone'></i> Responsive con Grid",
+      "description": "Estrategias para lograr layouts que se adapten automáticamente a distintos tamaños de pantalla.",
+      "item1": "<b>Media queries</b>: permiten aplicar estilos CSS condicionales según el ancho de la pantalla.",
+      "item2": "<b>@media (max-width: ...)</b>: se aplica cuando el ancho de la pantalla es <b>menor o igual</b> al valor indicado. Se suele usar para ajustar el diseño en pantallas pequeñas (ej: móviles).",
+      "item3": "<b>@media (min-width: ...)</b>: se aplica cuando el ancho de la pantalla es <b>mayor o igual</b> al valor indicado. Se usa en enfoques <b>mobile-first</b>, donde se define primero el diseño para móvil y luego se añaden reglas para pantallas más grandes.",
+      "item4": "Uso de <b>auto-fit</b> y <b>minmax()</b> para crear cuadrículas fluidas que se adaptan sin necesidad de media queries, generando tantas columnas como quepan en el contenedor.",
+      "item5": "Uso de <b>auto-fill</b>: similar a <b>auto-fit</b>, pero mantiene huecos reservados para las columnas que no alcanzan a llenarse.",
+      "item6": "Combinación con <b>grid-template-areas</b>: permite reorganizar fácilmente el layout en función de breakpoints, cambiando la disposición de bloques enteros.",
+      "item7": "Unidades relativas (<b>fr</b>, <b>%</b>, <b>auto</b>, <b>min-content</b>, <b>max-content</b>) favorecen el comportamiento flexible en pantallas pequeñas.",
+      "item8": "Propiedades modernas como <b>clamp()</b> ayudan a fijar un ancho mínimo, ideal y máximo sin necesidad de múltiples media queries."
+    }
+  }
+}
