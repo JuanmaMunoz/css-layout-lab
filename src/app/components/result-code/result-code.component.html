@@ -1,0 +1,19 @@
+<div class="result-code">
+  <h5 class="blue mt-1 mb-1">{{ "result" | translate }}</h5>
+  <div class="result-code__result">
+    <ng-content></ng-content>
+  </div>
+  <div class="row-2">
+    <app-code
+      [title]="'HTML'"
+      [code]="htmlCode"
+      [language]="language.HTML"
+    ></app-code>
+
+    <app-code
+      [title]="'CSS'"
+      [code]="cssCode"
+      [language]="language.CSS"
+    ></app-code>
+  </div>
+</div>

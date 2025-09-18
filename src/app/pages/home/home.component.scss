@@ -1,0 +1,110 @@
+.home {
+  padding: 1rem 2rem 0 2rem;
+  text-align: center;
+  &__header {
+    margin-top: 6dvh;
+    &__info {
+      margin-top: 1rem;
+      > h1 {
+        font-size: 15rem;
+        line-height: 0.7;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+      > h2 {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        margin-top: 0;
+      }
+    }
+    &__img {
+      display: block;
+      max-width: 0 auto;
+      > img {
+        width: 95%;
+      }
+    }
+  }
+  &__description {
+    &__recopilation {
+      & > p {
+        background-color: var(--color-dark);
+        border-radius: var(--radius);
+        margin-bottom: 0;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .home {
+    &__header {
+      &__info {
+        > h2 {
+          margin-bottom: 1.5rem;
+        }
+        > button {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .home {
+    &__header {
+      &__info {
+        > h1 {
+          font-size: 9rem;
+        }
+        > h2 {
+          font-size: 3rem;
+        }
+      }
+      &__img {
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .home {
+    padding: 1rem;
+    &__header {
+      margin-top: 2dvh;
+      &__info {
+        > h2 {
+          margin-bottom: 1.5rem;
+        }
+        > button {
+          margin-bottom: 0;
+        }
+      }
+      &__img {
+        > img {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home {
+    &__header {
+      &__info {
+        > h1 {
+          font-size: 7.5rem;
+        }
+        > h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

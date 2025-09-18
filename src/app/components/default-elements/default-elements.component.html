@@ -1,0 +1,11 @@
+<div class="default-elements mb-2">
+  <div class="default-elements__title">
+    <h4 [innerHTML]="defaulElements.title | translate"></h4>
+  </div>
+
+  <div class="default-elements__items">
+    @for (item of defaulElements.items; track $index) {
+      <span class="badge">{{ item }}</span>
+    }
+  </div>
+</div>

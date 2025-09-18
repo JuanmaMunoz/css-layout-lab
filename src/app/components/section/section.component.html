@@ -1,0 +1,9 @@
+<section class="section gray mb-2">
+  <h3 class="dark" [innerHTML]="section.id + '.title' | translate"></h3>
+  <p [innerHTML]="section.id + '.description' | translate"></p>
+  <ul>
+    @for (item of items; track $index) {
+      <li [innerHTML]="section.id + '.item' + ($index + 1) | translate"></li>
+    }
+  </ul>
+</section>

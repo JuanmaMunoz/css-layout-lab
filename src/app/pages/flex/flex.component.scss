@@ -1,0 +1,129 @@
+.flex {
+  &__example {
+    margin-bottom: 2rem;
+    > h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.container {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container-column {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  height: 15rem;
+  padding: 0.5rem;
+}
+
+.container-grow {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container-grow {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container-shrink {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  max-width: 20rem;
+  padding: 0.5rem;
+}
+
+.child {
+  padding: 1rem;
+}
+
+.child-1 {
+  padding: 0.5rem;
+}
+
+.child-2 {
+  padding: 1rem;
+}
+
+.child-3 {
+  padding: 2rem;
+}
+
+.child-1-grow {
+  flex-grow: 0;
+  padding: 1rem;
+}
+
+.child-2-grow {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.child-3-grow {
+  flex-grow: 2;
+  padding: 1rem;
+}
+
+.child-1-shrink {
+  flex-shrink: 0;
+  padding: 1rem;
+}
+
+.child-2-shrink {
+  flex-shrink: 1;
+  padding: 1rem;
+}
+
+.child-3-shrink {
+  flex-shrink: 1;
+  padding: 1rem;
+}
+
+.child-1-basis {
+  flex-basis: auto;
+  padding: 1rem;
+}
+
+.child-2-basis {
+  flex-basis: 90px;
+  padding: 1rem;
+}
+
+.child-3-basis {
+  flex-basis: 12rem;
+  padding: 1rem;
+}
+
+.container-basis {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.container-wrap {
+  border: 1px solid var(--color-blue);
+  gap: 1rem;
+  max-width: 10rem;
+  padding: 0.5rem;
+}
+
+.child-1-order {
+  order: 3;
+  padding: 1rem;
+}
+
+.child-2-order {
+  order: 1;
+  padding: 1rem;
+}
+
+.child-3-order {
+  order: 2;
+  padding: 1rem;
+}

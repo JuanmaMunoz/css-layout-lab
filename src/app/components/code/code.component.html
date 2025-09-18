@@ -1,0 +1,6 @@
+<div class="code mt-4">
+  @if (title) {
+    <h5 class="code__title blue mb-1">{{ title | translate }}</h5>
+  }
+  <pre><code #codeBlock [class]="language">{{ code }}</code></pre>
+</div>

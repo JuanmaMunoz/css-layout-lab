@@ -1,0 +1,66 @@
+<div class="block-inline main-container">
+  <app-title [title]="'blockInline.title'" />
+  <app-description [description]="'blockInline.description'" />
+
+  <!--Block-->
+  <div class="panel">
+    <div class="row-2">
+      <app-section [section]="{ id: 'blockInline.block', numberItems: 4 }" />
+      <app-default-elements [defaulElements]="defaultElementsBlock" />
+    </div>
+    <app-example-description
+      [title]="'example'"
+      [description]="'blockInline.block.example'"
+    />
+    <app-result-code [htmlCode]="infoBlockHtml" [cssCode]="infoBlockCss">
+      <div class="container">
+        <div class="child child-brick">1</div>
+        <div class="child child-brick">2</div>
+        <div class="child child-brick">3</div>
+      </div>
+    </app-result-code>
+  </div>
+
+  <!--Inline-->
+  <div class="panel">
+    <div class="row-2">
+      <app-section [section]="{ id: 'blockInline.inline', numberItems: 5 }" />
+      <app-default-elements [defaulElements]="defaultElementsInline" />
+    </div>
+    <app-example-description
+      [title]="'example'"
+      [description]="'blockInline.inline.example'"
+    />
+    <app-result-code [htmlCode]="infoInlineHtml" [cssCode]="infoInlineCss">
+      <div class="container-inline">
+        <span class="child-inline child-brick">1</span>
+        <span class="child-inline child-brick">2</span>
+        <span class="child-inline child-brick">3</span>
+      </div>
+    </app-result-code>
+  </div>
+
+  <!--Inline-Block-->
+  <div class="panel">
+    <div class="row-2">
+      <app-section
+        [section]="{ id: 'blockInline.inlineBlock', numberItems: 5 }"
+      />
+      <app-default-elements [defaulElements]="defaultElementsInlineBlock" />
+    </div>
+    <app-example-description
+      [title]="'example'"
+      [description]="'blockInline.inlineBlock.example'"
+    />
+    <app-result-code
+      [htmlCode]="infoInlineBlockHtml"
+      [cssCode]="infoInlineBlockCss"
+    >
+      <div class="container-inline-block">
+        <span class="child-inline-block child-brick">1</span>
+        <span class="child-inline-block child-brick">2</span>
+        <span class="child-inline-block child-brick">3</span>
+      </div>
+    </app-result-code>
+  </div>
+</div>

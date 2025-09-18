@@ -1,0 +1,9 @@
+.description {
+  text-align: justify;
+}
+
+@media screen and (max-width: 992px) {
+  .description {
+    font-size: 0.9rem;
+  }
+}

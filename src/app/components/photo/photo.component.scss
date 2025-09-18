@@ -1,0 +1,64 @@
+.photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  &__img {
+    height: 20rem;
+    overflow: hidden;
+    width: 20rem;
+  }
+}
+
+.row-first,
+.row-fith,
+.row-sixth,
+.row-seventh,
+.row-eighth {
+  display: flex;
+  justify-content: center;
+}
+
+.row-second,
+.row-third,
+.row-fourth {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1 {
+  border: solid 1.5px var(--color-sand);
+  height: 2rem;
+  width: 4rem;
+}
+
+.col-2 {
+  border: solid 1.5px var(--color-sand);
+  height: 3rem;
+  width: 5rem;
+}
+.col-3 {
+  border: solid 1.5px var(--color-sand);
+  height: 2rem;
+  width: 6rem;
+}
+.col-4 {
+  border: solid 1.5px var(--color-sand);
+  height: 3rem;
+  width: 7rem;
+}
+
+.col-5 {
+  border: solid 1.5px var(--color-sand);
+  height: 5.4rem;
+  width: 5rem;
+}
+
+.col-6 {
+  border: solid 1.5px var(--color-sand);
+  height: 5.4rem;
+  width: 7rem;
+}
+
+.child-brick {
+  border-radius: 0 !important;
+}

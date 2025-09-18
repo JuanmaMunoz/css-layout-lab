@@ -1,0 +1,24 @@
+<div class="example-brick">
+  <div class="panel">
+    <div class="row-2">
+      <div class="example-brick__info">
+        <h2 class="gray">{{ "home.example.title" | translate }}</h2>
+        <p
+          class="gray mt-0"
+          [innerHTML]="'home.example.description' | translate"
+        ></p>
+        <div class="mb-1">
+          <app-code
+            [title]="'HTML'"
+            [code]="htmlBrick"
+            [language]="language.HTML"
+          />
+        </div>
+        <div class="child-brick">Hello world!</div>
+      </div>
+      <div class="example-brick__brick">
+        <app-code [title]="'CSS'" [code]="cssBrick" [language]="language.CSS" />
+      </div>
+    </div>
+  </div>
+</div>

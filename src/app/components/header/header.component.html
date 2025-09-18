@@ -1,0 +1,37 @@
+<div class="header">
+  <div class="header__title">
+    <a [routerLink]="['home']">CCS Layout Lab</a>
+  </div>
+  <div class="header__links">
+    <ng-container
+      *ngTemplateOutlet="links; context: { show: false }"
+    ></ng-container>
+  </div>
+  <div class="header__button">
+    <a (click)="showHideMenu()" routerLinkActive="router-link-active"
+      ><i class="bi bi-list"></i
+    ></a>
+  </div>
+  <div #menu class="header__menu">
+    <ng-container
+      *ngTemplateOutlet="links; context: { show: true }"
+    ></ng-container>
+  </div>
+</div>
+<ng-template #links let-showIcon="show">
+  <a [routerLink]="['basic-concepts']">
+    <i *ngIf="showIcon" class="bi bi-book"></i>
+    {{ "basicConcepts.title2" | translate }}</a
+  >
+  <a [routerLink]="['block&inline']">
+    <i *ngIf="showIcon" class="bi bi-reception-1"></i>
+    Block & Inline</a
+  >
+  <a [routerLink]="['flex']"
+    ><i *ngIf="showIcon" class="bi bi-text-paragraph"></i> Flex</a
+  >
+  <a [routerLink]="['grid']"
+    ><i *ngIf="showIcon" class="bi bi-grid"></i> Grid</a
+  >
+  <a (click)="changeLanguage()">{{ lang }} <i class="bi bi-translate"></i></a>
+</ng-template>

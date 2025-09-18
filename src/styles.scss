@@ -1,1 +1,208 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-dark: #1c1c1c;
+  --color-blue: #0077aa;
+  --color-brick: #b45309;
+  --color-dark-brick: #a74d08;
+  --color-clear-brick: #bb6c30;
+  --color-sand: #f5f2eb;
+  --color-gray: #64696e;
+  --color-moss: #6f8f72;
+  --color-white: #ffffff;
+  --radius: 20px;
+}
+
+.dark {
+  color: var(--color-dark);
+}
+
+.blue {
+  color: var(--color-blue);
+}
+
+.brick {
+  color: var(--color-brick);
+}
+
+.sand {
+  color: var(--color-sand);
+}
+
+.gray {
+  color: var(--color-gray);
+}
+
+.moss {
+  color: var(--color-moss);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 2dvh 3dvw 2dvh 3dvw;
+  overflow: hidden;
+}
+
+.main-container {
+  padding: 2rem 4rem 0rem 4rem;
+}
+
+.panel {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  height: 100%;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.row-2 {
+  display: grid;
+  gap: 4%;
+  grid-template-columns: 48% 48%;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@mixin btn-variant($color, $hover-color) {
+  border: solid 3px $color;
+  color: $color;
+
+  &:hover {
+    border: solid 3px $hover-color;
+    color: $hover-color;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  &--dark {
+    @include btn-variant(var(--color-dark), var(--color-brick));
+  }
+  &--brick {
+    @include btn-variant(var(--color-brick), var(--color-dark));
+  }
+  &--moss {
+    @include btn-variant(var(--color-moss), var(--color-gray));
+  }
+}
+
+.small {
+  font-size: 1.5rem;
+}
+.child-brick {
+  background-color: var(--color-brick);
+  background-image: linear-gradient(
+      var(--color-clear-brick) 1px,
+      transparent 1px
+    ),
+    linear-gradient(var(--color-dark-brick) 2px, transparent 2px);
+  background-position:
+    0 0,
+    10px 10px;
+  background-size: 20px 20px;
+  border-radius: 2px;
+  color: var(--color-sand);
+  font-weight: 600;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .main-container {
+    padding: 1rem;
+  }
+  .row-2 {
+    gap: 0;
+    grid-template-columns: 100%;
+  }
+  .panel {
+    padding: 1rem;
+  }
+  .small {
+    font-size: 1rem;
+  }
+}
+
+//ScrollBar
+::-webkit-scrollbar {
+  height: 0.4rem;
+  width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 105, 110, 0.1);
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 105, 110, 0.2);
+}
+
+select {
+  border: solid 1px var(--color-moss);
+  border-radius: 3px;
+  color: var(--color-moss);
+  font-size: 1.5rem;
+  min-width: 15rem;
+  outline: none;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+}

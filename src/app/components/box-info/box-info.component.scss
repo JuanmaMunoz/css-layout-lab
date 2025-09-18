@@ -1,0 +1,24 @@
+.box-info {
+  div > span {
+    font-weight: 600;
+    position: relative;
+    top: -0.5rem;
+  }
+
+  &__margin {
+    background-color: var(--color-brick);
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  &__border {
+    background-color: var(--color-gray);
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  &__padding {
+    background-color: var(--color-moss);
+    padding: 1rem 2rem 2rem 2rem;
+  }
+  &__content {
+    background-color: var(--color-white);
+    padding: 1.8rem 1rem 1rem 1rem;
+  }
+}

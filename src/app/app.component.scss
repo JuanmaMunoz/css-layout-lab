@@ -1,0 +1,26 @@
+.app {
+  &__body {
+    background-color: var(--color-sand);
+    margin: 0;
+    max-height: 88dvh;
+    overflow-y: auto;
+  }
+  &__footer {
+    background-color: var(--color-moss);
+    border-radius: 0 0 var(--radius) var(--radius);
+    border-top: 1px solid var(--color-sand);
+    min-height: 2dvh;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app {
+    &__body {
+      border-radius: 0;
+      max-height: 92dvh;
+    }
+    &__footer {
+      border-radius: 0;
+    }
+  }
+}

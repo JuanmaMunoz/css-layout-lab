@@ -1,0 +1,43 @@
+.section {
+  text-align: justify;
+  > h3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: left;
+  }
+  > ul {
+    margin-left: 0.1rem;
+    > li {
+      line-height: 1.6rem;
+      text-align: left;
+      &::marker {
+        color: var(--color-moss);
+      }
+    }
+    > li:has(h5)::marker {
+      content: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .section {
+    > h3 {
+      font-size: 1.7rem;
+    }
+    font-size: 1rem;
+    > ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section {
+    font-size: 0.9rem;
+    > h3 {
+      font-size: 1.5rem;
+    }
+  }
+}

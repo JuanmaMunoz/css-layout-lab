@@ -1,0 +1,10 @@
+<div class="container-info mb-2">
+  <h3>{{ "container" | translate }}</h3>
+  <div class="container-info__body">
+    @for (i of childs; track $index) {
+      <div class="container-info__child child-brick">
+        <h4>{{ "child" | translate }}</h4>
+      </div>
+    }
+  </div>
+</div>

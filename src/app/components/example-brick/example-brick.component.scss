@@ -1,0 +1,16 @@
+.example-brick {
+  text-align: left;
+}
+
+.child-brick {
+  padding: 2rem;
+}
+.row-2 {
+  justify-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .row-2 {
+    justify-items: start;
+  }
+}
