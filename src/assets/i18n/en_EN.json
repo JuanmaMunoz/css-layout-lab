@@ -9,7 +9,7 @@
     "introduction": "In web development, structuring and shaping the interface is not always as simple as it seems. At <span class='brick'><b>CSS Layout Lab</b></span> we don’t aim to invent anything new, but rather to dive deeper into the <b>tools CSS already provides</b> to create <b>clear, accessible, and flexible</b> designs.",
     "description": "This article gathers in a practical way the main CSS layout techniques: from the traditional <span class='brick'><b>block</b></span> and <span class='brick'><b>inline</b></span>, to modern systems like <span class='brick'><b>flexbox</b></span> and <span class='brick'><b>grid</b></span>, which offer a much more advanced level of control.",
     "example": {
-      "title": "Learn visually with practical examples",
+      "title": "Learn visually with practical and dynamic examples",
       "description": "To <span class='blue'><b>make it easier</b></span> to understand the content and provide a <span class='blue'><b>visual aid</b></span> to users while learning different techniques to build <span class='blue'><b>layouts</b></span>, I decided to use the metaphor of <span class='brick'><b>bricks</b></span> in each <span class='blue'><b>example</b></span>. To avoid verbosity in the code, in the examples we only show the relevant information, but here I’ll show you how you can create a <span class='brick'><b>brick</b></span> with <span class='blue'><b>CSS</b></span>. I hope you enjoy the content!"
     },
     "aboutMe": {
@@ -30,7 +30,7 @@
       "item4": "<b>content</b>:&nbsp; The element’s content (text, image, etc.)."
     },
     "display": {
-      "title": "<i class='moss bi bi-2-circle'></i> Display, the box type",
+      "title": "<i class='moss bi bi-2-circle'></i> Display",
       "description": "The <b>display</b> property determines how the <b>box behaves</b>. It can be:",
       "item1": "<b>block</b>: Occupies the full available width and starts on a new line.",
       "item2": "<b>inline</b>: Does not start on a new line and only takes the necessary space.",
@@ -45,13 +45,13 @@
       "item3": "Understanding this structure helps control how <b>child</b> elements are <b>aligned</b> and <b>distributed</b>."
     },
     "containers": {
-      "title": "<i class='moss bi bi-4-circle'></i> Containers and child elements",
+      "title": "<i class='moss bi bi-4-circle'></i> Container and child",
       "description": "A layout always has a hierarchy:",
       "item1": "The <b>container</b> is the parent element that defines the <b>context</b> (display: flex, grid, etc).",
       "item2": "The <b>child</b> elements behave according to the rules of that context."
     },
     "gap": {
-      "title": "<i class='moss bi bi-5-circle'></i> Gap, spacing between children",
+      "title": "<i class='moss bi bi-5-circle'></i> Gap",
       "description": "The <b>gap</b>, <b>row-gap</b>, and <b>column-gap</b> properties allow control of the <b>spacing between elements</b> in a <b>flex</b> or <b>grid</b> container:",
       "item1": "<b>gap</b>:&nbsp; Defines uniform spacing between rows and columns.",
       "item2": "<b>row-gap</b>:&nbsp; Defines only the spacing between rows.",

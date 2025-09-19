@@ -46,9 +46,9 @@
   &__menu {
     align-items: self-start;
     background-color: var(--color-moss);
-    border-bottom: 2px solid var(--color-dark);
+    border-bottom: 3px solid var(--color-dark);
     border-bottom-left-radius: var(--radius);
-    border-left: 2px solid var(--color-dark);
+    border-left: 3px solid var(--color-dark);
     display: none;
     flex-direction: column;
     padding: 1rem;
@@ -59,7 +59,7 @@
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
     user-select: none;
-    width: 13rem;
+    width: 15rem;
     z-index: 999999;
     & > a {
       color: var(--color-sand);

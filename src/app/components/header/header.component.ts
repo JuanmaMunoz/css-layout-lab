@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Subscription } from 'rxjs';
+import { fromEvent, Subscription } from 'rxjs';
 import { Language } from '../../models/enums';
 
 @Component({
@@ -21,6 +21,17 @@ export class HeaderComponent {
     this.subscription.add(
       this.translateService.onLangChange.subscribe((data) => {
         this.setLang(data.lang as Language);
+      }),
+    );
+
+    this.subscription.add(
+      fromEvent(window, 'click').subscribe((e: any) => {
+        if (
+          !e.target.classList.value.includes('menu') &&
+          !e.target.classList.value.includes('bi-list')
+        ) {
+          this.menu.nativeElement.classList.remove('header__menu--visible');
+        }
       }),
     );
   }

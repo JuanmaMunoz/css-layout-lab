@@ -9,7 +9,7 @@
     "introduction": "En el desarrollo web, estructurar y dar forma a la interfaz no siempre es tan sencillo como parece. En <span class='brick'><b>CSS Layout Lab</b></span> no pretendemos inventar nada nuevo, sino profundizar en las <b>herramientas que CSS ya nos brinda</b> para crear diseños <b>claros, accesibles y flexibles</b>.",
     "description": "Este artículo reúne de manera práctica las principales técnicas de maquetación en CSS: desde los tradicionales <span class='brick'><b>block</b></span> e <span class='brick'><b>inline</b></span>, hasta sistemas modernos como <span class='brick'><b>flexbox</b></span> y <span class='brick'><b>grid</b></span>, que ofrecen un nivel de control mucho más avanzado.",
     "example": {
-      "title": "Aprende de forma visual con ejemplos prácticos",
+      "title": "Aprende de forma visual con ejemplos prácticos y dinámicos",
       "description": "Para <span class='blue'><b>facilitar</b></span> la comprensión del contenido y ofrecer una <span class='blue'><b>ayuda visual</b></span> al usuario en el aprendizaje de las distintas técnicas para construir <span class='blue'><b>layouts</b></span>, he decidido utilizar la metáfora de los <span class='brick'><b>ladrillos</b></span> en cada <span class='blue'><b>ejemplo</b></span>. Para evitar verbosidad en el código, en los ejemplos, solo mostramos la información relevante, pero aquí os muestro, cómo se puede crear un <span class='brick'><b>ladrillo</b></span> con <span class='blue'><b>CSS</b></span>. ¡Espero que disfruten del contenido!"
     },
     "aboutMe": {
@@ -22,7 +22,7 @@
     "title2": "Fundamentos básicos",
     "description": "<p>Nuestro objetivo es mostrar, a través de ejemplos simples y comparativos, cómo <b>alinear</b> elementos tanto en sentido <b>horizontal</b> como <b>vertical</b>, cómo <b>organizar</b> las distintas secciones de una página y en qué situaciones conviene aplicar cada técnica.</p><p>Queremos ayudarte a <b>visualizar</b>, <b>practicar</b> y <b>comprender</b> lo esencial para <b>mejorar</b> tus <b>diseños</b> y escribir <b>CSS</b> con mayor <b>seguridad</b> y <b>claridad</b>.</p><p>Antes de adentrarnos en <span class='brick'><b>block</b></span>, <span class='brick'><b>inline-block</b></span>, <span class='brick'><b>flex</b></span> o <span class='brick'><b>grid</b></span>, es fundamental entender algunos <b>conceptos clave</b> que determinan cómo se <b>posicionan</b> y <b>comportan</b> los elementos dentro de una <b>página web</b>.</p>",
     "boxModel": {
-      "title": "<i class='moss bi bi-1-circle'></i> Modelo de caja (Box Model)",
+      "title": "<i class='moss bi bi-1-circle'></i> Modelo de caja",
       "description": "Todo elemento en <b>HTML</b> es una <b>caja</b>. Este modelo define cómo se calcula el espacio que ocupa un elemento:",
       "item1": "<b>margin</b>:&nbsp; El espacio externo, entre esta caja y otras.",
       "item2": "<b>border</b>:&nbsp; El borde que rodea el contenido y el padding de un elemento, y se puede personalizar en grosor, estilo y color.",
@@ -30,7 +30,7 @@
       "item4": "<b>content</b>:&nbsp; El contenido del elemento (texto, imagen, etc.)."
     },
     "display": {
-      "title": "<i class='moss bi bi-2-circle'></i> Display, el tipo de caja",
+      "title": "<i class='moss bi bi-2-circle'></i> Display",
       "description": "La propiedad <b>display</b> determina cómo se <b>comporta la caja</b>. Puede ser:",
       "item1": "<b>block</b>: Ocupa todo el ancho disponible y comienza en una nueva línea.",
       "item2": "<b>inline</b>: No inicia una nueva línea y solo ocupa el espacio necesario.",
@@ -45,13 +45,13 @@
       "item3": "Entender esta estructura ayuda a controlar cómo se <b>alinean</b> y <b>distribuyen</b> los elementos <b>hijos</b>."
     },
     "containers": {
-      "title": "<i class='moss bi bi-4-circle'></i> Contenedores y elementos hijos",
+      "title": "<i class='moss bi bi-4-circle'></i> Contenedor e hijo",
       "description": "Un layout siempre tiene una jerarquía:",
       "item1": "El <b>contenedor</b> es el elemento padre que define el <b>contexto</b> (display: flex, grid, etc).",
       "item2": "Los elementos <b>hijos</b> se comportan según las reglas de ese contexto."
     },
     "gap": {
-      "title": "<i class='moss bi bi-5-circle'></i> Gap, separación entre hijos",
+      "title": "<i class='moss bi bi-5-circle'></i> Gap",
       "description": "Las propiedades <b>gap</b>, <b>row-gap</b> y <b>column-gap</b> permiten controlar la <b>separación entre los elementos</b> de un contenedor <b>flex</b> o <b>grid</b>:",
       "item1": "<b>gap</b>:&nbsp; Define un espacio uniforme entre filas y columnas.",
       "item2": "<b>row-gap</b>:&nbsp; Define solo la separación entre las filas.",
