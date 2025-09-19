@@ -66,7 +66,7 @@
       "title": "<i class='moss bi bi-7-circle'></i> Units in CSS",
       "description": "In <b>CSS</b> there are several <b>basic units</b> used to define measures such as sizes, margins, paddings, fonts, etc. They are divided into <b>absolute</b> and <b>relative</b> units.",
       "absolutes": {
-        "title": "<span class='gray'>Absolute Units</span>",
+        "title": "<span class='gray title-small'>Absolute Units</span>",
         "description": "These <b>do not change</b> depending on context; they always measure the same.",
         "item1": "<b>px (pixels)</b>:&nbsp; Fixed unit, ideal for precise details.",
         "item2": "<b>cm, mm, in (centimeters, millimeters, inches)</b>:&nbsp; More common in print.",
