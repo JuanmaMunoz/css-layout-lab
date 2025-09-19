@@ -75,7 +75,7 @@
         "item5": "<b>q (quarter millimeters)</b>:&nbsp; 1q = 0.25mm, used in print."
       },
       "relatives": {
-        "title": "<span class='gray'>Relative Units</span>",
+        "title": "<span class='gray title-small'>Relative Units</span>",
         "description": "These <b>change</b> depending on context, such as screen size or font size.",
         "item1": "<b>% (percentage)</b>:&nbsp; Relative to the parent element. Very useful for fluid layouts.",
         "item2": "<b>em</b>:&nbsp; Relative to the parent’s font size. 2em = 2 times the parent’s font size.",
@@ -104,7 +104,7 @@
       "example": "<p>In this example we have a container that contains three children with the class <b>child</b> set as display <span class='brick'><b>block</b></span>, where each child occupies the <b>full possible width</b> of the <b>container</b> because they <b>do not</b> have a fixed <b>width</b>.</p><p><i class='moss bi bi-info-square'></i> The class <b>child</b> would not need to be explicitly set as display <span class='brick'><b>block</b></span> since by default, <b>div</b> elements are <span class='brick'><b>block</b></span> (this is done for teaching purposes).</p>"
     },
     "inline": {
-      "title": "<i class='moss bi bi-box'></i> Inline",
+      "title": "<i class='moss bi bi-reception-0'></i> Inline",
       "description": "<b>Inline</b> elements flow <b>in the same line as text</b>:",
       "item1": "They <b>do not</b> start on a <b>new line</b> and only occupy the <b>necessary width</b>.",
       "item2": "They can be <b>nested</b> inside <b>block</b> or <b>inline</b> elements.",
@@ -115,7 +115,7 @@
       "example": "<p>In this example we have a container that contains three children with the class <b>child</b> set as display <span class='brick'><b>inline</b></span>, where each child only occupies the <b>necessary width</b> of the <b>container</b>. We can see how the container’s <b>padding</b> <b>does not adjust</b> to the height of its children when they are <span class='brick'><b>inline</b></span> elements.</p><p><i class='moss bi bi-info-square'></i> The class <b>child</b> would not need to be explicitly set as display <span class='brick'><b>inline</b></span> since by default, <b>span</b> elements are <span class='brick'><b>inline</b></span> (this is done for teaching purposes).</p>"
     },
     "inlineBlock": {
-      "title": "<i class='moss bi bi-box'></i> Inline-Block",
+      "title": "<i class='moss bi bi-reception-2'></i> Inline-Block",
       "description": "<b>Inline-block</b> elements combine characteristics of both <b>inline</b> and <b>block</b> elements:",
       "item1": "They flow <b>inline</b> like <b>inline</b> elements but allow <b>box dimensions</b> like <b>block</b> elements.",
       "item2": "They <b>align horizontally</b> with other inline or inline-block elements.",
@@ -321,7 +321,7 @@
       "example": "<p>In this dynamic example, we can see the different row and column alignments using <b>justify-content</b> and <b>align-content</b>.</p>"
     },
     "alignment-item": {
-      "title": "<i class='moss bi bi-box'></i> Item Alignment",
+      "title": "<i class='moss bi bi-pip'></i> Item Alignment",
       "description": "Properties to align an <b>individual</b> item inside its own cell.",
       "item1": "<b>justify-self</b>:&nbsp; aligns an item <b>horizontally</b> in its cell.",
       "item2": "<b>align-self</b>:&nbsp; aligns an item <b>vertically</b> in its cell.",

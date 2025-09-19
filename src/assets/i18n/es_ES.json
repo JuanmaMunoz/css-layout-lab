@@ -66,8 +66,8 @@
       "title": "<i class='moss bi bi-7-circle'></i> Unidades en CSS",
       "description": "En <b>CSS</b> existen varias <b>unidades básicas</b> que se usan para definir medidas como tamaños, márgenes, paddings, fuentes, etc. Se dividen en <b>absolutas</b> y <b>relativas</b>.",
       "absolutes": {
-        "title": "<span class='gray'>Unidades Absolutas</span>",
-        "description": "<b>Estas <b>no cambian</b> según el contexto; siempre miden lo mismo.",
+        "title": "<span class='gray title-small'>Unidades Absolutas</span>",
+        "description": "Estas <b>no cambian</b> según el contexto; siempre miden lo mismo.",
         "item1": "<b>px (píxeles)</b>:&nbsp; Unidad fija, ideal para detalles precisos.",
         "item2": "<b>cm, mm, in (centímetros, milímetros, pulgadas)</b>:&nbsp; Más comunes en impresión.",
         "item3": "<b>pt (puntos)</b>:&nbsp; Usado en tipografía, 1pt = 1/72 de pulgada.",
@@ -75,7 +75,7 @@
         "item5": "<b>q (cuartos de milímetro)</b>:&nbsp; 1q = 0.25mm, usado en impresión."
       },
       "relatives": {
-        "title": "<span class='gray'>Unidades Relativas</span>",
+        "title": "<span class='gray title-small'>Unidades Relativas</span>",
         "description": "Estas <b>cambian</b> según el contexto, como el tamaño de la pantalla o la fuente.",
         "item1": "<b>% (porcentaje)</b>:&nbsp; Relativo al elemento padre. Muy útil para layouts fluidos.",
         "item2": "<b>em</b>:&nbsp; Relativo al tamaño de fuente del elemento padre. 2em = 2 veces el tamaño de fuente del padre.",
@@ -104,7 +104,7 @@
       "example": "<p>En este ejemplo tenemos un contenedor que contiene tres hijos con la clase <b>child</b> configurados como display <span class='brick'><b>block</b></span>, donde cada hijo ocupa todo el ancho <b>posible</b> del <b>contenedor</b> al <b>no</b> tener un <b>ancho</b> establecido</b>.</p><p><i class='moss bi bi-info-square'></i> La clase <b>child</b>, no sería necesario, configurarla como display <span class='brick'><b>block</b></span> ya que por defecto, los <b>div</b> son <span class='brick'><b>block</b></span> (se hace con fines didácticos).</p>"
     },
     "inline": {
-      "title": "<i class='moss bi bi-box'></i> Inline",
+      "title": "<i class='moss bi bi-reception-0'></i> Inline",
       "description": "Los elementos <b>inline </b> fluyen <b>en la misma línea que el texto</b>:",
       "item1": "<b>No</b> inician en una <b>nueva línea</b> y solo ocupan el <b>ancho necesario</b>.",
       "item2": "Se pueden <b>anidar</b> dentro de elementos <b>block</b> o <b>inline</b>.",
@@ -115,7 +115,7 @@
       "example": "<p>En este ejemplo tenemos un contenedor que contiene tres hijos con la clase <b>child</b> configurados como display <span class='brick'><b>inline</b></span>, donde cada hijo solo ocupa el ancho <b>necesario</b> del <b>contenedor</b>. Podemos comprobar como el <b>padding</b> del contenedor, <b>no se ajusta</b> a la altura de sus hijos, si estos elementos son <span class='brick'><b>inline</b></span>.</p><p><i class='moss bi bi-info-square'></i> La clase <b>child</b>, no sería necesario, configurarla como display <span class='brick'><b>inline</b></span> ya que por defecto, los <b>span</b> son <span class='brick'><b>inline</b></span> (se hace con fines didácticos).</p>"
     },
     "inlineBlock": {
-      "title": "<i class='moss bi bi-box'></i> Inline-Block",
+      "title": "<i class='moss bi bi-reception-2'></i> Inline-Block",
       "description": "Los elementos <b>inline-block</b> combinan características de los elementos <b>inline</b> y <b>block</b>:",
       "item1": "Fluyen <b>en línea</b> como los elementos <b>inline</b>, pero permiten <b>dimensiones de caja</b> como los elementos <b>block</b>.",
       "item2": "Se <b>alinean horizontalmente</b> con otros elementos inline o inline-block.",
@@ -321,7 +321,7 @@
       "example": "<p>En este ejemplo dinámico, podemos comprobar las diferentes alineaciones de filas y columnas con las distintas propiedades de <b>justify-content</b> y <b>align-content</b>.</p>"
     },
     "alignment-item": {
-      "title": "<i class='moss bi bi-box'></i> Alineación de item",
+      "title": "<i class='moss bi bi-pip'></i> Alineación de item",
       "description": "Propiedades para alinear <b>individualmente</b> un item dentro de su propia celda.",
       "item1": "<b>justify-self</b>:&nbsp; alinea <b>horizontalmente</b> un item en su celda.",
       "item2": "<b>align-self</b>:&nbsp; alinea <b>verticalmente</b> un item en su celda.",

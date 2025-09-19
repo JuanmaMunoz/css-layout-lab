@@ -8,6 +8,10 @@
   flex-direction: row;
   height: 6dvh;
   justify-content: space-between;
+  user-select: none; /* standard */
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge antiguo */
   &__title {
     padding-left: 5rem;
     > a {

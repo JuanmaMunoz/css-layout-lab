@@ -101,6 +101,11 @@ body {
   text-align: center;
 }
 
+.title-small {
+  font-size: 1.1rem !important;
+  margin-top: 0 !important;
+}
+
 @mixin btn-variant($color, $hover-color) {
   border: solid 3px $color;
   color: $color;
@@ -202,6 +207,10 @@ body {
 }
 
 select {
+  appearance: none; /* delete native style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-white);
   border: solid 1px var(--color-moss);
   border-radius: 3px;
   color: var(--color-moss);
