@@ -131,6 +131,7 @@ export class InfoService {
   border: 1px solid #0077aa;
   display: flex;
   gap: 1rem;
+  height: 6rem;
   justify-content: ${justify};
   padding: 0.5rem;
 }
@@ -158,6 +159,7 @@ export class InfoService {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 15rem;
   justify-content: ${justify};
   padding: 0.5rem;
 }
