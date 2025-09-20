@@ -5,22 +5,22 @@
   "examples": "Examples",
   "result": "Result",
   "home": {
-    "getStarted": "Basic CSS Layout Fundamentals",
-    "introduction": "In web development, structuring and shaping the interface is not always as simple as it seems. At <span class='brick'><b>CSS Layout Lab</b></span> we don’t aim to invent anything new, but rather to dive deeper into the <b>tools CSS already provides</b> to create <b>clear, accessible, and flexible</b> designs.",
-    "description": "This article gathers in a practical way the main CSS layout techniques: from the traditional <span class='brick'><b>block</b></span> and <span class='brick'><b>inline</b></span>, to modern systems like <span class='brick'><b>flexbox</b></span> and <span class='brick'><b>grid</b></span>, which offer a much more advanced level of control.",
+    "getStarted": "Introduction to CSS Layouts",
+    "introduction": "<span class='brick'><b>CSS Layout Lab</b></span> is an interactive space to learn and experiment with the different ways of <b>building layouts</b> in <b>CSS</b>: from classic models like <span class='brick'><b>block</b></span> and <span class='brick'><b>inline</b></span>, to modern tools like <span class='brick'><b>flexbox</b></span> and <span class='brick'><b>grid</b></span>.",
+    "description": "<span class='brick'><b>CSS Layout Lab</b></span> provides <span class='moss'><b>clear documentation</b></span> and <span class='moss'><b>dynamic examples</b></span>, with which you can modify values and see in <span class='moss'><b>real time</b></span> how the arrangement of <span class='moss'><b>elements</b></span> <span class='moss'><b>adjusts</b></span>, gaining a better understanding of the possibilities of each approach and how to apply them in your projects.",
     "example": {
       "title": "Learn visually with practical and dynamic examples",
-      "description": "To <span class='blue'><b>make it easier</b></span> to understand the content and provide a <span class='blue'><b>visual aid</b></span> to users while learning different techniques to build <span class='blue'><b>layouts</b></span>, I decided to use the metaphor of <span class='brick'><b>bricks</b></span> in each <span class='blue'><b>example</b></span>. To avoid verbosity in the code, in the examples we only show the relevant information, but here I’ll show you how you can create a <span class='brick'><b>brick</b></span> with <span class='blue'><b>CSS</b></span>. I hope you enjoy the content!"
+      "description": "To <span class='blue'><b>make it easier</b></span> to understand the content and provide a <span class='blue'><b>visual aid</b></span> to users while learning different techniques to build <span class='blue'><b>layouts</b></span>, we decided to use the metaphor of <span class='brick'><b>bricks</b></span> in each <span class='blue'><b>example</b></span>. To avoid verbosity in the code, in the examples we only show the relevant information, but here I’ll show you how you can create a <span class='brick'><b>brick</b></span> with <span class='blue'><b>CSS</b></span>. I hope you enjoy the content!"
     },
     "aboutMe": {
       "title": "About Me",
-      "description": "<p>After many years working in web development, <b>CSS is one of those languages that never ceases to amaze me</b> with its possibilities and constant new features. And let’s be honest: I’ve never fully mastered it or gotten to know all its capabilities.</p><p>That’s why I decided to create this documentation, where I try to explain in a simple way the <b>creation of layouts with CSS</b>, which is one of the most frequent uses of this language in web programming.</p><p>This tutorial is aimed at all kinds of developers, from <b>juniors</b> to <b>experts</b>. Some will discover basic concepts here for the first time, while others will be able to observe natively the behavior of certain properties they might usually delegate to libraries like <b>Bootstrap</b>, without working directly with <b>Grid</b> or <b>Flexbox</b>.</p><p>I hope you enjoy it!</p>"
+      "description": "<p>After many years working in web development, <b>CSS continues to amaze me with its possibilities and constant innovations</b>. One of its most important and frequent uses is <b>layout management</b>, which allows you to organize and distribute the elements of a page in a flexible and precise way.</p><p>That's why I created this documentation, where I try to explain in a simple way <b>how to create layouts with CSS</b> and how to apply different techniques depending on the needs of each project.</p><p>This tutorial is designed for all kinds of developers, from <b>juniors</b> to <b>experts</b>. Some may discover basic concepts for the first time, while others can see in practice how certain properties behave, which are often handled by libraries like <b>Bootstrap</b>, exploring <b>Grid</b> and <b>Flexbox</b> directly.</p><p>I hope you enjoy it!</p>"
     }
   },
   "basicConcepts": {
-    "title": "Basic CSS Layout Fundamentals",
-    "title2": "Basic fundamentals",
-    "description": "<p>Our goal is to show, through simple and comparative examples, how to <b>align</b> elements both <b>horizontally</b> and <b>vertically</b>, how to <b>organize</b> different sections of a page, and in which situations each technique is best applied.</p><p>We want to help you <b>visualize</b>, <b>practice</b>, and <b>understand</b> the essentials to <b>improve</b> your <b>designs</b> and write <b>CSS</b> with greater <b>confidence</b> and <b>clarity</b>.</p><p>Before diving into <span class='brick'><b>block</b></span>, <span class='brick'><b>inline-block</b></span>, <span class='brick'><b>flex</b></span>, or <span class='brick'><b>grid</b></span>, it’s essential to understand some <b>key concepts</b> that determine how elements are <b>positioned</b> and <b>behave</b> within a <b>web page</b>.</p>",
+    "title": "Introduction to CSS Layouts",
+    "title2": "Introduction",
+    "description": "<p>In <b>CSS</b>, a <span class='brick'><b>layout</b></span> is the way <b>elements</b> are <b>organized</b> and <b>distributed</b> within a page or section. It determines where elements are placed, how they are <b>aligned</b> with each other, and how they <b>adapt</b> to the screen size.</p><p>Our goal is to show, through <b>simple</b> and comparative examples, how to <b>align</b> elements both <b>horizontally</b> and <b>vertically</b>, how to <b>organize</b> different sections of a page, and in which situations each technique is best applied.</p><p>We want to help you <b>visualize</b>, <b>practice</b>, and <b>understand</b> the essentials to <b>improve</b> your <b>designs</b> and write <b>CSS</b> with greater <b>confidence</b> and <b>clarity</b>.</p><p>Before diving into <span class='brick'><b>block</b></span>, <span class='brick'><b>inline-block</b></span>, <span class='brick'><b>flex</b></span>, or <span class='brick'><b>grid</b></span>, it is essential to understand some <b>key concepts</b> that determine how elements are <b>positioned</b> and <b>behave</b> within a <b>web page</b>.</p>",
     "boxModel": {
       "title": "<i class='moss bi bi-1-circle'></i> Box Model",
       "description": "Every element in <b>HTML</b> is a <b>box</b>. This model defines how the space occupied by an element is calculated:",
@@ -100,7 +100,7 @@
       "item2": "By default, they occupy <b>all available width</b>.",
       "item3": "They allow defining <b>width</b>, <b>height</b>, <b>margin</b>, <b>padding</b> without issues.",
       "item4": "They are <b>ideal</b> when you need elements to <b>stack vertically</b> and want to control <b>size</b> and <b>spacing</b>.",
-      "defaultElements": "HTML elements that are <span class='brick'>block</span> by <span class='brick'>default</span>:",
+      "defaultElements": "HTML elements that are <span class='brick'><b>block</b></span> by <span class='moss'><b>default</b></span>:",
       "example": "<p>In this example we have a container that contains three children with the class <b>child</b> set as display <span class='brick'><b>block</b></span>, where each child occupies the <b>full possible width</b> of the <b>container</b> because they <b>do not</b> have a fixed <b>width</b>.</p><p><i class='moss bi bi-info-square'></i> The class <b>child</b> would not need to be explicitly set as display <span class='brick'><b>block</b></span> since by default, <b>div</b> elements are <span class='brick'><b>block</b></span> (this is done for teaching purposes).</p>"
     },
     "inline": {
@@ -111,7 +111,7 @@
       "item3": "They <b>do not</b> allow box properties like <b>width, height, margin-top, margin-bottom</b>. Generally, you <b>cannot</b> set <b>width</b> or <b>height</b>, nor vertical margins. <b>You can</b> apply <b>padding</b> and <b>horizontal margin</b>.",
       "item4": "They can contain <b>only</b> text or <b>other</b> <b>inline</b> elements.",
       "item5": "They are <b>ideal</b> when you want content to <b>flow</b> inside a <b>paragraph</b>.",
-      "defaultElements": "HTML elements that are <span class='brick'>inline</span> by <span class='brick'>default</span>:",
+      "defaultElements": "HTML elements that are <span class='brick'><b>inline</b></span> by <span class='moss'><b>default</b></span>:",
       "example": "<p>In this example we have a container that contains three children with the class <b>child</b> set as display <span class='brick'><b>inline</b></span>, where each child only occupies the <b>necessary width</b> of the <b>container</b>. We can see how the container’s <b>padding</b> <b>does not adjust</b> to the height of its children when they are <span class='brick'><b>inline</b></span> elements.</p><p><i class='moss bi bi-info-square'></i> The class <b>child</b> would not need to be explicitly set as display <span class='brick'><b>inline</b></span> since by default, <b>span</b> elements are <span class='brick'><b>inline</b></span> (this is done for teaching purposes).</p>"
     },
     "inlineBlock": {
@@ -122,7 +122,7 @@
       "item3": "They <b>do</b> accept properties like <b>width</b>, <b>height</b>, <b>padding</b>, and <b>margin</b> (both vertical and horizontal).",
       "item4": "They <b>do not</b> start on a new line but <b>respect their own size</b> within the inline flow.",
       "item5": "They are <b>ideal</b> for <b>small components</b> like buttons, cards, or boxes that need to <b>align horizontally</b> but at the same time behave like a <b>block</b>.",
-      "defaultElements": "HTML elements that are <span class='brick'>inline-block</span> by <span class='brick'>default</span>:",
+      "defaultElements": "HTML elements that are <span class='brick'><b>inline-block</b></span> by <span class='moss'><b>default</b></span>:",
       "example": "<p>In this example we have a container that contains three children with the class <b>child</b> set as display <span class='brick'><b>inline-block</b></span>, where each child occupies the width and height set in its <b>configuration</b>. We can see how the container <b>adjusts</b> to the height of its children, unlike elements set as <span class='brick'><b>inline</b></span>.</p>"
     }
   },

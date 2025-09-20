@@ -16,7 +16,7 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'basic-concepts',
+    path: 'introduction',
     component: BasicConceptsComponent,
   },
   {

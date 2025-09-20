@@ -15,6 +15,6 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   public navigate(): void {
-    this.router.navigate([`basic-concepts`]);
+    this.router.navigate([`introduction`]);
   }
 }
