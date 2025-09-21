@@ -604,8 +604,8 @@ export class InfoService {
 
   public getHtmlUnits(): string {
     return `<div class="container">
-  <div class="child">fr (1fr)</div>
-  <div class="child">% (20%)</div>
+  <div class="child">1fr</div>
+  <div class="child">20%</div>
   <div class="child">auto</div>
   <div class="child">min-content</div>
   <div class="child">max-content</div>
