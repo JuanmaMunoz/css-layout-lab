@@ -310,18 +310,16 @@
           [title]="'example'"
           [description]="'grid.alignment-container.example'"
         />
-        <div class="row-2">
-          <app-select
-            [label]="'grid.alignment-container.selectJustify'"
-            [items]="selectJustify"
-            (actionSelect)="changeJustify($event)"
-          />
-          <app-select
-            [label]="'grid.alignment-container.selectAlign'"
-            [items]="selectAlign"
-            (actionSelect)="changeAlign($event)"
-          />
-        </div>
+        <app-select
+          [label]="'grid.alignment-container.selectJustify'"
+          [items]="selectJustify"
+          (actionSelect)="changeJustify($event)"
+        />
+        <app-select
+          [label]="'grid.alignment-container.selectAlign'"
+          [items]="selectAlign"
+          (actionSelect)="changeAlign($event)"
+        />
       </div>
     </div>
 
@@ -354,18 +352,16 @@
           [title]="'example'"
           [description]="'grid.alignment-content.example'"
         />
-        <div class="row-2">
-          <app-select
-            [label]="'grid.alignment-content.selectJustify'"
-            [items]="selectJustifyContent"
-            (actionSelect)="changeJustifyContent($event)"
-          />
-          <app-select
-            [label]="'grid.alignment-content.selectAlign'"
-            [items]="selectAlignContent"
-            (actionSelect)="changeAlignContent($event)"
-          />
-        </div>
+        <app-select
+          [label]="'grid.alignment-content.selectJustify'"
+          [items]="selectJustifyContent"
+          (actionSelect)="changeJustifyContent($event)"
+        />
+        <app-select
+          [label]="'grid.alignment-content.selectAlign'"
+          [items]="selectAlignContent"
+          (actionSelect)="changeAlignContent($event)"
+        />
       </div>
     </div>
 
@@ -396,18 +392,16 @@
           [title]="'example'"
           [description]="'grid.alignment-item.example'"
         />
-        <div class="row-2">
-          <app-select
-            [label]="'grid.alignment-item.selectJustify'"
-            [items]="selectJustifyItem"
-            (actionSelect)="changeJustifyItem($event)"
-          />
-          <app-select
-            [label]="'grid.alignment-item.selectAlign'"
-            [items]="selectAlignItem"
-            (actionSelect)="changeAlignItem($event)"
-          />
-        </div>
+        <app-select
+          [label]="'grid.alignment-item.selectJustify'"
+          [items]="selectJustifyItem"
+          (actionSelect)="changeJustifyItem($event)"
+        />
+        <app-select
+          [label]="'grid.alignment-item.selectAlign'"
+          [items]="selectAlignItem"
+          (actionSelect)="changeAlignItem($event)"
+        />
       </div>
     </div>
 

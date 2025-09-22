@@ -33,6 +33,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'en/home',
+    redirectTo: 'home',
   },
 ];

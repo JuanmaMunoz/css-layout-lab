@@ -8,6 +8,7 @@
   flex-direction: row;
   height: 6dvh;
   justify-content: space-between;
+  min-height: 2rem;
   user-select: none; /* standard */
   -webkit-user-select: none; /* Safari/Chrome */
   -moz-user-select: none; /* Firefox */
@@ -58,7 +59,7 @@
     padding: 1rem;
     position: absolute;
     right: 0;
-    top: 6dvh;
+    top: max(6dvh, 2rem);
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
@@ -108,7 +109,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .header {
     &__menu {
       display: none;
