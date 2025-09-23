@@ -16,7 +16,7 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'basic-concepts',
+    path: 'introduction',
     component: BasicConceptsComponent,
   },
   {
@@ -33,6 +33,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'en/home',
+    redirectTo: 'home',
   },
 ];

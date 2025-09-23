@@ -42,6 +42,7 @@
 
 body {
   font-family: "Inter", sans-serif;
+  line-height: 1.4;
   margin: 2dvh 3dvw 2dvh 3dvw;
   overflow: hidden;
 }
@@ -61,6 +62,14 @@ body {
 
 .ml-1 {
   margin-left: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 2rem;
+}
+
+.mr-1 {
+  margin-right: 0.5rem;
 }
 .mb-0 {
   margin-bottom: 0 !important;
@@ -95,6 +104,11 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.title-small {
+  font-size: 1.1rem !important;
+  margin-top: 0 !important;
 }
 
 @mixin btn-variant($color, $hover-color) {
@@ -198,6 +212,15 @@ body {
 }
 
 select {
+  appearance: none; /* delete native style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--color-white);
+  /* icono como background */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%236f8f72' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1rem;
   border: solid 1px var(--color-moss);
   border-radius: 3px;
   color: var(--color-moss);

@@ -1,6 +1,6 @@
 <div class="header">
   <div class="header__title">
-    <a [routerLink]="['home']">CCS Layout Lab</a>
+    <a [routerLink]="['home']">CSS Layout Lab</a>
   </div>
   <div class="header__links">
     <ng-container
@@ -19,19 +19,21 @@
   </div>
 </div>
 <ng-template #links let-showIcon="show">
-  <a [routerLink]="['basic-concepts']">
-    <i *ngIf="showIcon" class="bi bi-book"></i>
+  <a [routerLink]="['introduction']">
+    <i *ngIf="showIcon" class="bi bi-book mr-1"></i>
     {{ "basicConcepts.title2" | translate }}</a
   >
   <a [routerLink]="['block&inline']">
-    <i *ngIf="showIcon" class="bi bi-reception-1"></i>
-    Block & Inline</a
+    <i *ngIf="showIcon" class="bi bi-reception-1 mr-1"></i>
+    block & inline</a
   >
   <a [routerLink]="['flex']"
-    ><i *ngIf="showIcon" class="bi bi-text-paragraph"></i> Flex</a
+    ><i *ngIf="showIcon" class="bi bi-layout-three-columns mr-1"></i> flex</a
   >
   <a [routerLink]="['grid']"
-    ><i *ngIf="showIcon" class="bi bi-grid"></i> Grid</a
+    ><i *ngIf="showIcon" class="bi bi-grid mr-1"></i> grid</a
   >
-  <a (click)="changeLanguage()">{{ lang }} <i class="bi bi-translate"></i></a>
+  <a (click)="changeLanguage()"
+    ><i class="bi bi-translate mr-1"></i> {{ lang }}
+  </a>
 </ng-template>

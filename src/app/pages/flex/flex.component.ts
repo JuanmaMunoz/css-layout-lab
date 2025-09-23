@@ -118,7 +118,7 @@ export class FlexComponent {
     this.htmlCodeGrow = this.infoService.getHmlJustifyAligns();
     this.cssCodeGrow = this.infoService.getCssCodeGrow();
 
-    this.htmlCodeShrink = this.infoService.getHmlJustifyAligns();
+    this.htmlCodeShrink = this.infoService.getHtmlCodeShrink();
     this.cssCodeShrink = this.infoService.getCssCodeShrink();
 
     this.htmlCodeBasis = this.infoService.getHmlBasis();

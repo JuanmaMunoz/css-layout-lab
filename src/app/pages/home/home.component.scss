@@ -26,6 +26,9 @@
     }
   }
   &__description {
+    &__info {
+      font-size: 1.2rem;
+    }
     &__recopilation {
       & > p {
         background-color: var(--color-dark);
@@ -89,6 +92,11 @@
         > img {
           margin-top: 1rem;
         }
+      }
+    }
+    &__description {
+      &__info {
+        font-size: 1rem;
       }
     }
   }

@@ -71,7 +71,7 @@ export class InfoService {
   display: inline-block;
   margin: 0.5rem;
   padding: 1rem;
-  width: 6rem;
+  width: 2rem;
 }`;
   }
 
@@ -122,6 +122,14 @@ export class InfoService {
 </div>`;
   }
 
+  public getHtmlCodeShrink(): string {
+    return `<div class="container">
+  <span class="child-1">This is an example</span>
+  <span class="child-2">This is an example</span>
+  <span class="child-3">This is an example</span>
+</div>`;
+  }
+
   public getCssCodeJustifyAligns(
     justify: JustifyContent,
     align: AlignItems,
@@ -131,6 +139,7 @@ export class InfoService {
   border: 1px solid #0077aa;
   display: flex;
   gap: 1rem;
+  height: 6rem;
   justify-content: ${justify};
   padding: 0.5rem;
 }
@@ -158,6 +167,7 @@ export class InfoService {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 15rem;
   justify-content: ${justify};
   padding: 0.5rem;
 }
@@ -386,7 +396,7 @@ export class InfoService {
   display: grid;
   gap: 1rem;
   grid-auto-rows: 5rem;
-  grid-template-columns: 50% 1fr 2fr;
+  grid-template-columns: 20% 1fr 2fr;
   grid-template-rows: 4rem;
   padding: 0.5rem;
 }
@@ -399,8 +409,8 @@ export class InfoService {
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
-  grid-auto-columns: 10rem;
-  grid-template-columns: 50% 1fr 2fr;
+  grid-auto-columns: 5rem;
+  grid-template-columns: 20% 1fr 2fr;
   padding: 0.5rem;
 }
 
@@ -441,7 +451,7 @@ export class InfoService {
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 50% 1fr 2fr;
+  grid-template-columns: 20% 1fr 2fr;
   grid-template-rows: 4rem;
   padding: 0.5rem;
 }
@@ -454,7 +464,7 @@ export class InfoService {
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 50% 1fr 2fr;
+  grid-template-columns: 20% 1fr 2fr;
   grid-template-rows: 4rem;
   padding: 0.5rem;
 }
@@ -543,9 +553,9 @@ export class InfoService {
   public getHtmlAreas(): string {
     return `<div class="container">
   <div class="header">header</div>
-  <div class="body-left">body-left</div>
-  <div class="body-center">body-center</div>
-  <div class="body-right">body-right</div>
+  <div class="body-left">left</div>
+  <div class="body-center">center</div>
+  <div class="body-right">right</div>
   <div class="footer">footer</div>
 </div>`;
   }
@@ -559,7 +569,7 @@ export class InfoService {
     "header header header"
     "body-left body-center body-right"
     "footer footer footer";
-  grid-template-columns: 150px 1fr 150px;
+  grid-template-columns: 75px 1fr 75px;
   grid-template-rows: 2fr 4rem 1fr;
   padding: 0.5rem;
 }
@@ -602,8 +612,8 @@ export class InfoService {
 
   public getHtmlUnits(): string {
     return `<div class="container">
-  <div class="child">fr (1fr)</div>
-  <div class="child">% (20%)</div>
+  <div class="child">1fr</div>
+  <div class="child">20%</div>
   <div class="child">auto</div>
   <div class="child">min-content</div>
   <div class="child">max-content</div>
@@ -666,10 +676,10 @@ export class InfoService {
   public getHtmlAlignmentContainer(): string {
     return `<div class="container">
   <div class="child">1</div>
-  <div class="child-height">2</div>
+  <div class="child-big">2</div>
   <div class="child">3</div>
   <div class="child">4</div>
-  <div class="child-height">5</div>
+  <div class="child-big">5</div>
   <div class="child">6</div>
 </div>`;
   }
@@ -680,7 +690,7 @@ export class InfoService {
   ): string {
     console.log(justify, align);
     return `.container {
-  align-items: ${align}
+  align-items: ${align};
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
@@ -689,9 +699,8 @@ export class InfoService {
   padding: 0.5rem;
 }
 
-.child-height {
-  padding: 1rem;  
-  height: 4rem;
+.child-big {
+  padding: 2rem;  
 }
 
 .child {
@@ -716,7 +725,7 @@ export class InfoService {
   ): string {
     console.log(justify, align);
     return `.container {
-  align-content: ${align}
+  align-content: ${align};
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
@@ -752,7 +761,7 @@ export class InfoService {
 }
 
 .item {
-  align-self: ${align}
+  align-self: ${align};
   justify-self: ${justify};
 }
 
