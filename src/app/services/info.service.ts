@@ -122,6 +122,14 @@ export class InfoService {
 </div>`;
   }
 
+  public getHtmlCodeShrink(): string {
+    return `<div class="container">
+  <span class="child-1">This is an example</span>
+  <span class="child-2">This is an example</span>
+  <span class="child-3">This is an example</span>
+</div>`;
+  }
+
   public getCssCodeJustifyAligns(
     justify: JustifyContent,
     align: AlignItems,
