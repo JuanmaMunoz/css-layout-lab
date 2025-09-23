@@ -200,7 +200,7 @@
       "description": "Define cómo un <b>ítem</b> flex <b>crece</b> para llenar el espacio extra disponible en el <b>contenedor</b>.",
       "item1": "Valor por defecto:&nbsp; 0 (<b>no</b> crece).",
       "item2": "Si pones un número <b>mayor</b> que 0, el ítem <b>crecerá proporcionalmente</b> según ese <b>valor</b>.",
-      "example": "<p>En este ejemplo, podemos comprobar como el <b>item</b> con la clase <b>child-1</b> tiene el tamaño <b>por defecto</b> al tener <b>flex-grow</b> a <b>0</b>. Por el contrario, el resto de <b>items</b>, <b>crecen</b> en <b>proporción</b> al valor de <b>flex-grow</b> en su respectiva clase, ocupando el item <b>child-3</b> el <b>doble</b> del ancho que el item <b>child-2</b>.</p>"
+      "example": "<p>En este ejemplo, podemos comprobar como el <b>item</b> con la clase <b>child-1</b> tiene el tamaño <b>por defecto</b> al tener <b>flex-grow</b> a <b>0</b>. Por el contrario, el resto de <b>items</b>, <b>crecen</b> en <b>proporción</b> al valor de <b>flex-grow</b> en su respectiva clase, creciendo el item <b>child-3</b> el <b>doble</b> que el item <b>child-2</b>.</p>"
     },
     "shrink": {
       "title": "<i class='moss bi bi-1-square'></i> flex-shrink</span>",
