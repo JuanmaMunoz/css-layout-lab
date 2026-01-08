@@ -5,7 +5,7 @@ CSS Layout Lab is an interactive space to learn and experiment with the differen
 ## 🛠️ Tech Stack
 
 - Angular 19
-- Rxjs 19
+- RxJS 7.8
 - SCSS
 
 ## Install dependecies
