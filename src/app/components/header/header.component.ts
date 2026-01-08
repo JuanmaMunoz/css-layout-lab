@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { fromEvent, Subscription } from 'rxjs';
@@ -11,11 +18,11 @@ import { Language } from '../../models/enums';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy {
   @ViewChild('menu') menu!: ElementRef;
   private subscription = new Subscription();
-  public lang!: string;
-  constructor(private translateService: TranslateService) {}
+  public lang = 'en';
+  private translateService = inject(TranslateService);
 
   ngOnInit(): void {
     this.subscription.add(
@@ -25,10 +32,11 @@ export class HeaderComponent {
     );
 
     this.subscription.add(
-      fromEvent(window, 'click').subscribe((e: any) => {
+      fromEvent(window, 'click').subscribe((e) => {
+        const target = e.target as HTMLElement;
         if (
-          !e.target.classList.value.includes('menu') &&
-          !e.target.classList.value.includes('bi-list')
+          !target!.classList.contains('menu') &&
+          !target!.classList.contains('bi-list')
         ) {
           this.menu.nativeElement.classList.remove('header__menu--visible');
         }

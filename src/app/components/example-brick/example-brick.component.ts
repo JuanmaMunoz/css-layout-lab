@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TypeLanguage } from '../../models/enums';
 import { InfoService } from '../../services/info.service';
@@ -10,12 +10,12 @@ import { CodeComponent } from '../code/code.component';
   templateUrl: './example-brick.component.html',
   styleUrl: './example-brick.component.scss',
 })
-export class ExampleBrickComponent {
+export class ExampleBrickComponent implements OnInit {
   public language = TypeLanguage;
   public cssBrick!: string;
   public htmlBrick!: string;
-
-  constructor(private infoService: InfoService) {
+  private infoService = inject(InfoService);
+  ngOnInit(): void {
     this.cssBrick = this.infoService.getCssBrick();
     this.htmlBrick = this.infoService.getHtmlBrick();
   }

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './photo.component.scss',
 })
 export class PhotoComponent {
-  public img: string = 'assets/images/photo.jpg';
+  public img = 'assets/images/photo.jpg';
 }

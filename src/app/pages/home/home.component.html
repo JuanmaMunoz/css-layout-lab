@@ -19,6 +19,14 @@
       <p class="sand" [innerHTML]="'home.description' | translate"></p>
     </div>
   </div>
-  <app-example-brick />
-  <app-about-me />
+  @defer (on viewport) {
+    <app-example-brick />
+  } @placeholder {
+    <app-spinner />
+  }
+  @defer (on viewport) {
+    <app-about-me />
+  } @placeholder {
+    <app-spinner />
+  }
 </div>
