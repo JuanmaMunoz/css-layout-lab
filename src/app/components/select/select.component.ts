@@ -8,9 +8,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './select.component.scss',
 })
 export class SelectComponent {
+  @Input() id!: string;
   @Input() label!: string;
   @Input() items: string[] = [];
-  @Output() actionSelect: EventEmitter<string> = new EventEmitter();
+  @Output() actionSelect = new EventEmitter<string>();
 
   public changeSelect(event: Event): void {
     this.actionSelect.emit((event.target as HTMLSelectElement).value as string);

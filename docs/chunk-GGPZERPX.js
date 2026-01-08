@@ -1,0 +1,1 @@
+var R=(e=>(e.CSS="language-css",e.HTML="language-html",e))(R||{});var N=(e=>(e.ROW="rows",e.COLUMN="columns",e))(N||{}),r=(e=>(e.ROW="example row",e.COLUMN="example column",e))(r||{}),S=(E=>(E.ROW="row",E.COLUMN="column",E.DENSE="dense",E))(S||{}),T=(e=>(e.COLUMNROW="grid-column / grid-row",e.AREA="grid-area",e))(T||{});export{R as a,N as b,r as c,S as d,T as e};

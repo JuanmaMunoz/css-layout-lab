@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DescriptionComponent } from '../../components/description/description.component';
 import { ExampleDescriptionComponent } from '../../components/example-description/example-description.component';
 import { ResultCodeComponent } from '../../components/result-code/result-code.component';
 import { SectionComponent } from '../../components/section/section.component';
 import { SelectComponent } from '../../components/select/select.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { TitleComponent } from '../../components/title/title.component';
 import {
   AlignGrid,
@@ -28,11 +29,12 @@ import { InfoService } from '../../services/info.service';
     ResultCodeComponent,
     SelectComponent,
     CommonModule,
+    SpinnerComponent,
   ],
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.scss',
 })
-export class GridComponent {
+export class GridComponent implements OnInit {
   public grid: Grid = Grid.GRID;
 
   public gridCss!: string;
@@ -135,7 +137,8 @@ export class GridComponent {
     AlignGrid.END,
   ];
 
-  constructor(private infoService: InfoService) {
+  private infoService = inject(InfoService);
+  ngOnInit(): void {
     this.changeGrid(this.grid);
     this.fixedGridHtml = this.infoService.getHtmlFixed();
     this.fixedGridCss = this.infoService.getCssFixed();

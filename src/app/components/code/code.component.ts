@@ -1,17 +1,15 @@
-import { isPlatformBrowser } from '@angular/common';
 import {
   AfterViewInit,
   Component,
   ElementRef,
-  Inject,
   Input,
-  PLATFORM_ID,
+  OnChanges,
   SimpleChanges,
   ViewChild,
 } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TypeLanguage } from '../../models/enums';
-declare var Prism: any;
+declare const Prism: { highlightElement: (element: HTMLElement) => void };
 @Component({
   selector: 'app-code',
   standalone: true,
@@ -19,26 +17,20 @@ declare var Prism: any;
   templateUrl: './code.component.html',
   styleUrl: './code.component.scss',
 })
-export class CodeComponent implements AfterViewInit {
+export class CodeComponent implements AfterViewInit, OnChanges {
   @Input() title!: string;
   @Input() code!: string;
   @Input() language!: TypeLanguage;
   @ViewChild('codeBlock', { static: true }) codeBlock!: ElementRef<HTMLElement>;
-  private firstRender: boolean = false;
-  private isBrowser = false;
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-  }
+  private firstRender = false;
 
   ngAfterViewInit(): void {
-    if (this.isBrowser) {
-      this.highlightCode();
-      this.firstRender = true;
-    }
+    this.highlightCode();
+    this.firstRender = true;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['code'] && this.firstRender && this.isBrowser) {
+    if (changes['code'] && this.firstRender) {
       this.highlightCode();
     }
   }

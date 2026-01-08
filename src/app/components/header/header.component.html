@@ -8,7 +8,12 @@
     ></ng-container>
   </div>
   <div class="header__button">
-    <a (click)="showHideMenu()" routerLinkActive="router-link-active"
+    <a
+      (click)="showHideMenu()"
+      routerLinkActive="router-link-active"
+      aria-label="show menu"
+      role="button"
+      tabindex="0"
       ><i class="bi bi-list"></i
     ></a>
   </div>
@@ -20,20 +25,34 @@
 </div>
 <ng-template #links let-showIcon="show">
   <a [routerLink]="['introduction']">
-    <i *ngIf="showIcon" class="bi bi-book mr-1"></i>
+    @if (showIcon) {
+      <i class="bi bi-book mr-1"></i>
+    }
     {{ "basicConcepts.title2" | translate }}</a
   >
   <a [routerLink]="['block&inline']">
-    <i *ngIf="showIcon" class="bi bi-reception-1 mr-1"></i>
+    @if (showIcon) {
+      <i class="bi bi-reception-1 mr-1"></i>
+    }
     block & inline</a
   >
-  <a [routerLink]="['flex']"
-    ><i *ngIf="showIcon" class="bi bi-layout-three-columns mr-1"></i> flex</a
+  <a [routerLink]="['flex']">
+    @if (showIcon) {
+      <i class="bi bi-layout-three-columns mr-1"></i>
+    }
+    flex</a
   >
-  <a [routerLink]="['grid']"
-    ><i *ngIf="showIcon" class="bi bi-grid mr-1"></i> grid</a
+  <a [routerLink]="['grid']">
+    @if (showIcon) {
+      <i class="bi bi-grid mr-1"></i>
+    }
+    grid</a
   >
-  <a (click)="changeLanguage()"
+  <a
+    (click)="changeLanguage()"
+    aria-label="change language"
+    role="button"
+    tabindex="1"
     ><i class="bi bi-translate mr-1"></i> {{ lang }}
   </a>
 </ng-template>
