@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DefaultElementsComponent } from '../../components/default-elements/default-elements.component';
 import { DescriptionComponent } from '../../components/description/description.component';
 import { ExampleDescriptionComponent } from '../../components/example-description/example-description.component';
 import { ResultCodeComponent } from '../../components/result-code/result-code.component';
 import { SectionComponent } from '../../components/section/section.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { TitleComponent } from '../../components/title/title.component';
 import { IDefaultElements } from '../../models/interfaces';
 import { InfoService } from '../../services/info.service';
@@ -17,11 +18,12 @@ import { InfoService } from '../../services/info.service';
     DefaultElementsComponent,
     ResultCodeComponent,
     ExampleDescriptionComponent,
+    SpinnerComponent,
   ],
   templateUrl: './block-inline.component.html',
   styleUrl: './block-inline.component.scss',
 })
-export class BlockInlineComponent {
+export class BlockInlineComponent implements OnInit {
   public defaultElementsBlock: IDefaultElements = {
     title: 'blockInline.block.defaultElements',
     items: [
@@ -106,8 +108,8 @@ export class BlockInlineComponent {
   public infoInlineCss!: string;
   public infoInlineBlockHtml!: string;
   public infoInlineBlockCss!: string;
-
-  constructor(public infoService: InfoService) {
+  public infoService = inject(InfoService);
+  ngOnInit(): void {
     this.infoBlockHtml = this.infoService.getHmlBlock();
     this.infoBlockCss = this.infoService.getCssBlock();
     this.infoInlineHtml = this.infoService.getHmlInline();

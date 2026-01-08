@@ -12,6 +12,7 @@
           [description]="'flex.direction.example'"
         />
         <app-select
+          [id]="'flex-direction-select'"
           [label]="'flex.direction.select'"
           [items]="selectDirection"
           (actionSelect)="changeDirection($event)"
@@ -34,218 +35,251 @@
   </div>
 
   <!--Flex-wrap-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'flex.wrap', numberItems: 3 }" />
-      <div>
-        <app-example-description
-          [title]="'example'"
-          [description]="'flex.wrap.example'"
-        />
-        <app-select
-          [label]="'flex.wrap.select'"
-          [items]="selectWrap"
-          (actionSelect)="changeWrap($event)"
-        />
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'flex.wrap', numberItems: 3 }" />
+        <div>
+          <app-example-description
+            [title]="'example'"
+            [description]="'flex.wrap.example'"
+          />
+          <app-select
+            [id]="'flex-wrap'"
+            [label]="'flex.wrap.select'"
+            [items]="selectWrap"
+            (actionSelect)="changeWrap($event)"
+          />
+        </div>
       </div>
+      <app-result-code [htmlCode]="htmlCodeWrap" [cssCode]="cssCodeWrap">
+        <div
+          class="container-wrap"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'row',
+            'flex-wrap': wrap
+          }"
+        >
+          <div class="child child-brick">1</div>
+          <div class="child child-brick">2</div>
+          <div class="child child-brick">3</div>
+          <div class="child child-brick">4</div>
+          <div class="child child-brick">5</div>
+        </div>
+      </app-result-code>
     </div>
-    <app-result-code [htmlCode]="htmlCodeWrap" [cssCode]="cssCodeWrap">
-      <div
-        class="container-wrap"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'row',
-          'flex-wrap': wrap
-        }"
-      >
-        <div class="child child-brick">1</div>
-        <div class="child child-brick">2</div>
-        <div class="child child-brick">3</div>
-        <div class="child child-brick">4</div>
-        <div class="child child-brick">5</div>
-      </div>
-    </app-result-code>
-  </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--Justify & align Row-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section
-        [section]="{ id: 'flex.justifyAlignRow.justify', numberItems: 6 }"
-      />
-      <app-section
-        [section]="{ id: 'flex.justifyAlignRow.align', numberItems: 5 }"
-      />
-    </div>
-    <app-example-description
-      [title]="'example'"
-      [description]="'flex.justifyAlignRow.example'"
-    />
-    <div class="row-2">
-      <app-select
-        [label]="'flex.justifyAlignRow.justify.select'"
-        [items]="selectJustify"
-        (actionSelect)="changeJustify($event)"
-      />
-      <app-select
-        [label]="'flex.justifyAlignRow.align.select'"
-        [items]="selectAligns"
-        (actionSelect)="changeAligns($event)"
-      />
-    </div>
-    <app-result-code [htmlCode]="htmlCodeJustify" [cssCode]="cssCodeJustify">
-      <div
-        class="container-justify"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'row',
-          'justify-content': justify,
-          'align-items': aligns
-        }"
-      >
-        <div class="child-1 child-brick">1</div>
-        <div class="child-2 child-brick">2</div>
-        <div class="child-3 child-brick">3</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section
+          [section]="{ id: 'flex.justifyAlignRow.justify', numberItems: 6 }"
+        />
+        <app-section
+          [section]="{ id: 'flex.justifyAlignRow.align', numberItems: 5 }"
+        />
       </div>
-    </app-result-code>
-  </div>
+      <app-example-description
+        [title]="'example'"
+        [description]="'flex.justifyAlignRow.example'"
+      />
+      <div class="row-2">
+        <app-select
+          [id]="'flex-justify-row'"
+          [label]="'flex.justifyAlignRow.justify.select'"
+          [items]="selectJustify"
+          (actionSelect)="changeJustify($event)"
+        />
+        <app-select
+          [id]="'flex-align-row'"
+          [label]="'flex.justifyAlignRow.align.select'"
+          [items]="selectAligns"
+          (actionSelect)="changeAligns($event)"
+        />
+      </div>
+      <app-result-code [htmlCode]="htmlCodeJustify" [cssCode]="cssCodeJustify">
+        <div
+          class="container-justify"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'row',
+            'justify-content': justify,
+            'align-items': aligns
+          }"
+        >
+          <div class="child-1 child-brick">1</div>
+          <div class="child-2 child-brick">2</div>
+          <div class="child-3 child-brick">3</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--Justify & align Column-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section
-        [section]="{ id: 'flex.justifyAlignColumn.justify', numberItems: 6 }"
-      />
-      <app-section
-        [section]="{ id: 'flex.justifyAlignColumn.align', numberItems: 4 }"
-      />
-    </div>
-    <app-example-description
-      [title]="'example'"
-      [description]="'flex.justifyAlignColumn.example'"
-    />
-    <div class="row-2">
-      <app-select
-        [label]="'flex.justifyAlignColumn.justify.select'"
-        [items]="selectJustify"
-        (actionSelect)="changeJustifyColumn($event)"
-      />
-      <app-select
-        [label]="'flex.justifyAlignColumn.align.select'"
-        [items]="selectAlignsColumn"
-        (actionSelect)="changeAlignsColumn($event)"
-      />
-    </div>
-    <app-result-code
-      [htmlCode]="htmlCodeJustifyColumn"
-      [cssCode]="cssCodeJustifyColumn"
-    >
-      <div
-        class="container-column"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'column',
-          'justify-content': justifyColumn,
-          'align-items': alignsColumn
-        }"
-      >
-        <div class="child-1 child-brick">1</div>
-        <div class="child-2 child-brick">2</div>
-        <div class="child-3 child-brick">3</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section
+          [section]="{ id: 'flex.justifyAlignColumn.justify', numberItems: 6 }"
+        />
+        <app-section
+          [section]="{ id: 'flex.justifyAlignColumn.align', numberItems: 4 }"
+        />
       </div>
-    </app-result-code>
-  </div>
+      <app-example-description
+        [title]="'example'"
+        [description]="'flex.justifyAlignColumn.example'"
+      />
+      <div class="row-2">
+        <app-select
+          [id]="'flex-justify-column'"
+          [label]="'flex.justifyAlignColumn.justify.select'"
+          [items]="selectJustify"
+          (actionSelect)="changeJustifyColumn($event)"
+        />
+        <app-select
+          [id]="'flex-align-column'"
+          [label]="'flex.justifyAlignColumn.align.select'"
+          [items]="selectAlignsColumn"
+          (actionSelect)="changeAlignsColumn($event)"
+        />
+      </div>
+      <app-result-code
+        [htmlCode]="htmlCodeJustifyColumn"
+        [cssCode]="cssCodeJustifyColumn"
+      >
+        <div
+          class="container-column"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'column',
+            'justify-content': justifyColumn,
+            'align-items': alignsColumn
+          }"
+        >
+          <div class="child-1 child-brick">1</div>
+          <div class="child-2 child-brick">2</div>
+          <div class="child-3 child-brick">3</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--Grow-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'flex.grow', numberItems: 2 }" />
-      <app-example-description
-        [title]="'example'"
-        [description]="'flex.grow.example'"
-      />
-    </div>
-    <app-result-code [htmlCode]="htmlCodeGrow" [cssCode]="cssCodeGrow">
-      <div
-        class="container-grow"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'row'
-        }"
-      >
-        <div class="child-1-grow child-brick">1</div>
-        <div class="child-2-grow child-brick">2</div>
-        <div class="child-3-grow child-brick">3</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'flex.grow', numberItems: 2 }" />
+        <app-example-description
+          [title]="'example'"
+          [description]="'flex.grow.example'"
+        />
       </div>
-    </app-result-code>
-  </div>
+      <app-result-code [htmlCode]="htmlCodeGrow" [cssCode]="cssCodeGrow">
+        <div
+          class="container-grow"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'row'
+          }"
+        >
+          <div class="child-1-grow child-brick">1</div>
+          <div class="child-2-grow child-brick">2</div>
+          <div class="child-3-grow child-brick">3</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--Shrink-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'flex.shrink', numberItems: 2 }" />
-      <app-example-description
-        [title]="'example'"
-        [description]="'flex.shrink.example'"
-      />
-    </div>
-
-    <app-result-code [htmlCode]="htmlCodeShrink" [cssCode]="cssCodeShrink">
-      <div
-        class="container-shrink"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'row'
-        }"
-      >
-        <div class="child-1-shrink child-brick">This is an example</div>
-        <div class="child-2-shrink child-brick">This is an example</div>
-        <div class="child-3-shrink child-brick">This is an example</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'flex.shrink', numberItems: 2 }" />
+        <app-example-description
+          [title]="'example'"
+          [description]="'flex.shrink.example'"
+        />
       </div>
-    </app-result-code>
-  </div>
+
+      <app-result-code [htmlCode]="htmlCodeShrink" [cssCode]="cssCodeShrink">
+        <div
+          class="container-shrink"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'row'
+          }"
+        >
+          <div class="child-1-shrink child-brick">This is an example</div>
+          <div class="child-2-shrink child-brick">This is an example</div>
+          <div class="child-3-shrink child-brick">This is an example</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--basis-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'flex.basis', numberItems: 2 }" />
-      <app-example-description
-        [title]="'example'"
-        [description]="'flex.basis.example'"
-      />
-    </div>
-
-    <app-result-code [htmlCode]="htmlCodeBasis" [cssCode]="cssCodeBasis">
-      <div
-        class="container-basis"
-        [ngStyle]="{
-          display: 'flex',
-          'flex-direction': 'row'
-        }"
-      >
-        <div class="child-1-basis child-brick">1</div>
-        <div class="child-2-basis child-brick">2</div>
-        <div class="child-3-basis child-brick">3</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'flex.basis', numberItems: 2 }" />
+        <app-example-description
+          [title]="'example'"
+          [description]="'flex.basis.example'"
+        />
       </div>
-    </app-result-code>
-  </div>
+
+      <app-result-code [htmlCode]="htmlCodeBasis" [cssCode]="cssCodeBasis">
+        <div
+          class="container-basis"
+          [ngStyle]="{
+            display: 'flex',
+            'flex-direction': 'row'
+          }"
+        >
+          <div class="child-1-basis child-brick">1</div>
+          <div class="child-2-basis child-brick">2</div>
+          <div class="child-3-basis child-brick">3</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--order-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'flex.order', numberItems: 2 }" />
-      <app-example-description
-        [title]="'example'"
-        [description]="'flex.order.example'"
-      />
-    </div>
-
-    <app-result-code [htmlCode]="htmlCodeOrder" [cssCode]="cssCodeOrder">
-      <div class="container" [ngStyle]="{ display: 'flex' }">
-        <div class="child-1-order child-brick">1</div>
-        <div class="child-2-order child-brick">2</div>
-        <div class="child-3-order child-brick">3</div>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'flex.order', numberItems: 2 }" />
+        <app-example-description
+          [title]="'example'"
+          [description]="'flex.order.example'"
+        />
       </div>
-    </app-result-code>
-  </div>
+
+      <app-result-code [htmlCode]="htmlCodeOrder" [cssCode]="cssCodeOrder">
+        <div class="container" [ngStyle]="{ display: 'flex' }">
+          <div class="child-1-order child-brick">1</div>
+          <div class="child-2-order child-brick">2</div>
+          <div class="child-3-order child-brick">3</div>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 </div>

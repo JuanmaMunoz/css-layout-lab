@@ -1,4 +1,15 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  afterNextRender,
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EnvironmentInjector,
+  inject,
+  OnDestroy,
+  OnInit,
+  runInInjectionContext,
+  ViewChild,
+} from '@angular/core';
 import {
   NavigationEnd,
   Router,
@@ -8,22 +19,23 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { filter, Subscription } from 'rxjs';
 import { HeaderComponent } from './components/header/header.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Language } from './models/enums';
+import { showApp } from './utils/animations';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, HeaderComponent],
+  imports: [RouterOutlet, RouterModule, HeaderComponent, SpinnerComponent],
   templateUrl: './app.component.html',
+  animations: [showApp(500)],
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('content') content!: ElementRef;
   private subscription = new Subscription();
-
-  constructor(
-    private router: Router,
-    private translate: TranslateService,
-  ) {}
+  private router = inject(Router);
+  private translate = inject(TranslateService);
+  private envInjector = inject(EnvironmentInjector);
 
   ngOnInit(): void {
     const lang = localStorage.getItem('language') || Language.ENGLISH;
@@ -36,14 +48,19 @@ export class AppComponent {
   }
 
   ngAfterViewInit(): void {
-    this.subscription.add(
-      this.router.events
-        .pipe(filter((event) => event instanceof NavigationEnd))
-        .subscribe(() => {
-          this.content.nativeElement.scrollTop = 0;
-        }),
-    );
+    runInInjectionContext(this.envInjector, () => {
+      afterNextRender(() => {
+        this.router.events
+          .pipe(filter((event) => event instanceof NavigationEnd))
+          .subscribe(() => {
+            if (this.content) {
+              this.content.nativeElement.scrollTop = 0;
+            }
+          });
+      });
+    });
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

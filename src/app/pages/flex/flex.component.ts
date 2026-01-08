@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DescriptionComponent } from '../../components/description/description.component';
 import { SectionComponent } from '../../components/section/section.component';
@@ -15,6 +15,7 @@ import {
 import { ExampleDescriptionComponent } from '../../components/example-description/example-description.component';
 import { ResultCodeComponent } from '../../components/result-code/result-code.component';
 import { SelectComponent } from '../../components/select/select.component';
+import { SpinnerComponent } from '../../components/spinner/spinner.component';
 import { InfoService } from './../../services/info.service';
 
 @Component({
@@ -28,11 +29,12 @@ import { InfoService } from './../../services/info.service';
     ExampleDescriptionComponent,
     SelectComponent,
     ResultCodeComponent,
+    SpinnerComponent,
   ],
   templateUrl: './flex.component.html',
   styleUrl: './flex.component.scss',
 })
-export class FlexComponent {
+export class FlexComponent implements OnInit {
   public selectDirection: FlexDirection[] = [
     FlexDirection.ROW,
     FlexDirection.ROWREVERSE,
@@ -99,7 +101,8 @@ export class FlexComponent {
   public htmlCodeOrder!: string;
   public cssCodeOrder!: string;
 
-  constructor(private infoService: InfoService) {
+  private infoService = inject(InfoService);
+  ngOnInit(): void {
     this.htmlCodeDirection = this.infoService.getHmlBlock();
     this.cssCodeDirection = this.infoService.getCssDirection(this.direction);
     this.htmlCodeWrap = this.infoService.getHmlWrap();

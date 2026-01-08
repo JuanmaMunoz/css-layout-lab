@@ -22,45 +22,53 @@
   </div>
 
   <!--Inline-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section [section]="{ id: 'blockInline.inline', numberItems: 5 }" />
-      <app-default-elements [defaulElements]="defaultElementsInline" />
-    </div>
-    <app-example-description
-      [title]="'example'"
-      [description]="'blockInline.inline.example'"
-    />
-    <app-result-code [htmlCode]="infoInlineHtml" [cssCode]="infoInlineCss">
-      <div class="container-inline">
-        <span class="child-inline child-brick">1</span>
-        <span class="child-inline child-brick">2</span>
-        <span class="child-inline child-brick">3</span>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section [section]="{ id: 'blockInline.inline', numberItems: 5 }" />
+        <app-default-elements [defaulElements]="defaultElementsInline" />
       </div>
-    </app-result-code>
-  </div>
+      <app-example-description
+        [title]="'example'"
+        [description]="'blockInline.inline.example'"
+      />
+      <app-result-code [htmlCode]="infoInlineHtml" [cssCode]="infoInlineCss">
+        <div class="container-inline">
+          <span class="child-inline child-brick">1</span>
+          <span class="child-inline child-brick">2</span>
+          <span class="child-inline child-brick">3</span>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 
   <!--Inline-Block-->
-  <div class="panel">
-    <div class="row-2">
-      <app-section
-        [section]="{ id: 'blockInline.inlineBlock', numberItems: 5 }"
-      />
-      <app-default-elements [defaulElements]="defaultElementsInlineBlock" />
-    </div>
-    <app-example-description
-      [title]="'example'"
-      [description]="'blockInline.inlineBlock.example'"
-    />
-    <app-result-code
-      [htmlCode]="infoInlineBlockHtml"
-      [cssCode]="infoInlineBlockCss"
-    >
-      <div class="container-inline-block">
-        <span class="child-inline-block child-brick">1</span>
-        <span class="child-inline-block child-brick">2</span>
-        <span class="child-inline-block child-brick">3</span>
+  @defer (on viewport) {
+    <div class="panel">
+      <div class="row-2">
+        <app-section
+          [section]="{ id: 'blockInline.inlineBlock', numberItems: 5 }"
+        />
+        <app-default-elements [defaulElements]="defaultElementsInlineBlock" />
       </div>
-    </app-result-code>
-  </div>
+      <app-example-description
+        [title]="'example'"
+        [description]="'blockInline.inlineBlock.example'"
+      />
+      <app-result-code
+        [htmlCode]="infoInlineBlockHtml"
+        [cssCode]="infoInlineBlockCss"
+      >
+        <div class="container-inline-block">
+          <span class="child-inline-block child-brick">1</span>
+          <span class="child-inline-block child-brick">2</span>
+          <span class="child-inline-block child-brick">3</span>
+        </div>
+      </app-result-code>
+    </div>
+  } @placeholder {
+    <app-spinner />
+  }
 </div>

@@ -1,6 +1,6 @@
 <div class="select mb-1">
-  <label class="gray" [innerHTML]="label | translate"></label>
-  <select (change)="changeSelect($event)">
+  <label [for]="id" class="gray" [innerHTML]="label | translate"></label>
+  <select [id]="id" (change)="changeSelect($event)">
     @for (item of items; track $index) {
       <option [value]="item">{{ item }}</option>
     }
