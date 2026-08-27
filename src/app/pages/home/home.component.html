@@ -8,7 +8,17 @@
       </button>
     </div>
     <div class="home__header__img">
-      <img [src]="img" alt="CSS Layout Lab" />
+      <picture>
+        <source srcset="assets/images/cssLayoutLabReal.webp" type="image/webp" />
+        <img
+          [src]="img"
+          alt="CSS Layout Lab"
+          width="786"
+          height="422"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
     </div>
   </div>
   <div class="home__description row-2 mb-2">

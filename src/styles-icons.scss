@@ -1,0 +1,14 @@
+/*
+ * Loaded right after bootstrap-icons so this @font-face re-declaration wins.
+ * The only change vs. the package default is `font-display: block` -> `swap`,
+ * which removes the render-blocking behaviour Lighthouse flags for the icon font.
+ */
+@font-face {
+  font-family: "bootstrap-icons";
+  font-display: swap;
+  src:
+    url("bootstrap-icons/font/fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47")
+      format("woff2"),
+    url("bootstrap-icons/font/fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47")
+      format("woff");
+}

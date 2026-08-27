@@ -1,26 +1,24 @@
 .app {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+
   &__body {
     background-color: var(--color-sand);
+    flex: 1 1 auto;
     margin: 0;
-    max-height: 88dvh;
+    min-height: 0;
     overflow-y: auto;
   }
+
   &__footer {
     background-color: var(--color-moss);
-    border-radius: 0 0 var(--radius) var(--radius);
     border-top: 1px solid var(--color-sand);
+    color: var(--color-sand);
+    font-size: 0.7rem;
     min-height: 2dvh;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .app {
-    &__body {
-      border-radius: 0;
-      max-height: 92dvh;
-    }
-    &__footer {
-      border-radius: 0;
-    }
+    padding-top: 0.3rem;
+    text-align: center;
   }
 }

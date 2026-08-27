@@ -19,13 +19,12 @@ import {
 import { TranslateService } from '@ngx-translate/core';
 import { filter, Subscription } from 'rxjs';
 import { HeaderComponent } from './components/header/header.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Language } from './models/enums';
 import { showApp } from './utils/animations';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, HeaderComponent, SpinnerComponent],
+  imports: [RouterOutlet, RouterModule, HeaderComponent],
   templateUrl: './app.component.html',
   animations: [showApp(500)],
   styleUrl: './app.component.scss',

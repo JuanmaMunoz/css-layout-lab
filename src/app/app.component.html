@@ -1,13 +1,9 @@
-@defer (on viewport) {
-  <div [@showApp] class="app">
-    <div class="app__header">
-      <app-header></app-header>
-    </div>
-    <div #content class="app__body">
-      <router-outlet />
-    </div>
-    <div class="app__footer"></div>
+<div [@showApp] class="app">
+  <div class="app__header">
+    <app-header></app-header>
   </div>
-} @placeholder {
-  <app-spinner />
-}
+  <main #content class="app__body">
+    <router-outlet />
+  </main>
+  <div class="app__footer">JMMG - CSS Layout Lab - 2025 &reg;</div>
+</div>

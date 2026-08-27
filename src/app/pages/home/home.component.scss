@@ -20,7 +20,8 @@
     &__img {
       display: block;
       max-width: 0 auto;
-      > img {
+      img {
+        height: auto;
         width: 95%;
       }
     }
@@ -67,7 +68,7 @@
         }
       }
       &__img {
-        > img {
+        img {
           width: 100%;
         }
       }
@@ -89,7 +90,7 @@
         }
       }
       &__img {
-        > img {
+        img {
           margin-top: 1rem;
         }
       }

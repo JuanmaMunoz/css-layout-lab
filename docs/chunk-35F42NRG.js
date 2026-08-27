@@ -1,4 +1,4 @@
-import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya as a,bb as u,fb as f,gb as b,hb as x,jb as n,kb as t,pb as C,qb as y,wa as l}from"./chunk-FDKYN3UF.js";var E=["codeBlock"];function G(e,i){if(e&1&&(s(0,"h5",2),n(1),C(2,"translate"),a()),e&2){let d=u();l(),t(y(2,1,d.title))}}var A=class e{title;code;language;codeBlock;firstRender=!1;ngAfterViewInit(){this.highlightCode(),this.firstRender=!0}ngOnChanges(i){i.code&&this.firstRender&&this.highlightCode()}highlightCode(){this.codeBlock?.nativeElement&&(this.codeBlock.nativeElement.textContent=this.code??"",Prism.highlightElement(this.codeBlock.nativeElement))}static \u0275fac=function(d){return new(d||e)};static \u0275cmp=p({type:e,selectors:[["app-code"]],viewQuery:function(d,r){if(d&1&&f(E,7),d&2){let c;b(c=x())&&(r.codeBlock=c.first)}},inputs:{title:"title",code:"code",language:"language"},features:[g],decls:6,vars:4,consts:[["codeBlock",""],[1,"code","mt-4"],[1,"code__title","blue","mb-1"]],template:function(d,r){d&1&&(s(0,"div",1),m(1,G,3,3,"h5",2),s(2,"pre")(3,"code",null,0),n(5),a()()()),d&2&&(l(),h(r.title?1:-1),l(2),v(r.language),l(2),t(r.code))},dependencies:[k,w],styles:["code[class*=language-][_ngcontent-%COMP%], pre[class*=language-][_ngcontent-%COMP%]{margin:0;padding:0}@media (max-width: 576px){code[class*=language-][_ngcontent-%COMP%], pre[class*=language-][_ngcontent-%COMP%]{font-size:.8rem!important}}"]})};var H=class e{getHmlBlock(){return`<div class="container">
+import{Ab as y,Bb as w,Fa as g,Ia as m,M as o,Sa as v,Ta as h,Xa as a,Y as p,Ya as l,bb as u,fb as b,gb as f,hb as x,jb as n,kb as t,pb as C,qb as E,wa as s}from"./chunk-QYBIWH6M.js";var A=(e=>(e.CSS="language-css",e.HTML="language-html",e))(A||{});var R=(e=>(e.ROW="rows",e.COLUMN="columns",e))(R||{}),S=(e=>(e.ROW="example row",e.COLUMN="example column",e))(S||{}),H=(r=>(r.ROW="row",r.COLUMN="column",r.DENSE="dense",r))(H||{}),T=(e=>(e.COLUMNROW="grid-column / grid-row",e.AREA="grid-area",e))(T||{});var I=["codeBlock"];function P(d,i){if(d&1&&(a(0,"h4",2),n(1),C(2,"translate"),l()),d&2){let e=u();s(),t(E(2,1,e.title))}}var N=class d{title;code;language;codeBlock;firstRender=!1;ngAfterViewInit(){this.highlightCode(),this.firstRender=!0}ngOnChanges(i){i.code&&this.firstRender&&this.highlightCode()}highlightCode(){this.codeBlock?.nativeElement&&(this.codeBlock.nativeElement.textContent=this.code??"",Prism.highlightElement(this.codeBlock.nativeElement))}static \u0275fac=function(e){return new(e||d)};static \u0275cmp=g({type:d,selectors:[["app-code"]],viewQuery:function(e,r){if(e&1&&b(I,7),e&2){let c;f(c=x())&&(r.codeBlock=c.first)}},inputs:{title:"title",code:"code",language:"language"},features:[p],decls:6,vars:4,consts:[["codeBlock",""],[1,"code","mt-4"],[1,"code__title","blue","mb-1"]],template:function(e,r){e&1&&(a(0,"div",1),m(1,P,3,3,"h4",2),a(2,"pre")(3,"code",null,0),n(5),l()()()),e&2&&(s(),h(r.title?1:-1),s(2),v(r.language),s(2),t(r.code))},dependencies:[w,y],styles:["code[class*=language-][_ngcontent-%COMP%], pre[class*=language-][_ngcontent-%COMP%]{margin:0;padding:0}.code__title[_ngcontent-%COMP%]{font-size:1rem;font-weight:600}@media (max-width: 576px){code[class*=language-][_ngcontent-%COMP%], pre[class*=language-][_ngcontent-%COMP%]{font-size:.8rem!important}}"]})};var O=class d{getHmlBlock(){return`<div class="container">
   <div class="child">1</div>
   <div class="child">2</div>
   <div class="child">3</div>
@@ -68,8 +68,8 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
   <span class="child-1">This is an example</span>
   <span class="child-2">This is an example</span>
   <span class="child-3">This is an example</span>
-</div>`}getCssCodeJustifyAligns(i,d){return`.container {
-  align-items: ${d};
+</div>`}getCssCodeJustifyAligns(i,e){return`.container {
+  align-items: ${e};
   border: 1px solid #0077aa;
   display: flex;
   gap: 1rem;
@@ -88,8 +88,8 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
 
 .child-3 {
   padding: 2rem;
-}`}getCssCodeJustifyAlignsColumn(i,d){return`.container {
-  align-items: ${d};
+}`}getCssCodeJustifyAlignsColumn(i,e){return`.container {
+  align-items: ${e};
   border: 1px solid #0077aa;
   display: flex;
   flex-direction: column;
@@ -468,8 +468,8 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
   <div class="child">4</div>
   <div class="child-big">5</div>
   <div class="child">6</div>
-</div>`}getCssAlignmentContainer(i,d){return console.log(i,d),`.container {
-  align-items: ${d};
+</div>`}getCssAlignmentContainer(i,e){return console.log(i,e),`.container {
+  align-items: ${e};
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
@@ -491,8 +491,8 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
   <div class="child">4</div>
   <div class="child">5</div>
   <div class="child">6</div>
-</div>`}getCssAlignmentContent(i,d){return console.log(i,d),`.container {
-  align-content: ${d};
+</div>`}getCssAlignmentContent(i,e){return console.log(i,e),`.container {
+  align-content: ${e};
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
@@ -508,7 +508,7 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
   <div class="child">1</div>
   <div class="child item">2</div>
   <div class="child">3</div>
-</div>`}getCssAlignmentItem(i,d){return console.log(i,d),`.container {
+</div>`}getCssAlignmentItem(i,e){return console.log(i,e),`.container {
   border: 1px solid #0077aa;
   display: grid;
   gap: 1rem;
@@ -519,7 +519,7 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
 }
 
 .item {
-  align-self: ${d};
+  align-self: ${e};
   justify-self: ${i};
 }
 
@@ -543,4 +543,4 @@ import{Ab as w,Bb as k,Fa as p,Ia as m,M as o,Sa as v,Ta as h,Xa as s,Y as g,Ya 
   font-weight: 600;
   padding: 3rem;
   text-align: center;
-}`}static \u0275fac=function(d){return new(d||e)};static \u0275prov=o({token:e,factory:e.\u0275fac,providedIn:"root"})};export{A as a,H as b};
+}`}static \u0275fac=function(e){return new(e||d)};static \u0275prov=o({token:d,factory:d.\u0275fac,providedIn:"root"})};export{A as a,R as b,S as c,H as d,T as e,N as f,O as g};

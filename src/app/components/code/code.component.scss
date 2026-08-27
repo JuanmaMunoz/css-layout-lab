@@ -4,6 +4,11 @@ pre[class*="language-"] {
   padding: 0;
 }
 
+.code__title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 @media (max-width: 576px) {
   code[class*="language-"],
   pre[class*="language-"] {
