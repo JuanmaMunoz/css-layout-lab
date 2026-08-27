@@ -1,6 +1,6 @@
 <div class="code mt-4">
   @if (title) {
-    <h4 class="code__title blue mb-1">{{ title | translate }}</h4>
+    <p class="code__title blue">{{ title | translate }}</p>
   }
   <pre><code #codeBlock [class]="language">{{ code }}</code></pre>
 </div>
